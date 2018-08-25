@@ -1,0 +1,14 @@
+/////////////////////////////////
+// !THEME / COMPONENTS / BASE
+/////////////////////////////////
+.fonts-loaded {
+    body {
+        @include font-sans;
+    }
+}
+
+.nc-theme {
+    main {
+        position: relative;
+    }
+}

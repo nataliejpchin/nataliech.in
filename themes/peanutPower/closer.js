@@ -1,0 +1,1 @@
+___browserSync___.socket.on('disconnect', window.close.bind(window));

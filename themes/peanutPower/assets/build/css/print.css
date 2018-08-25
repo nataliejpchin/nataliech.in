@@ -1,0 +1,122 @@
+@charset "UTF-8";
+*,
+*:before,
+*:after {
+  background: transparent !important;
+  color: #000 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  text-shadow: none !important;
+  font-family: Arial, sans-serif; }
+
+abbr[title]:after {
+  content: " (" attr(title) ")"; }
+
+img {
+  max-width: 100% !important; }
+
+p,
+h2,
+h3 {
+  orphans: 3;
+  widows: 3; }
+
+h2,
+h3 {
+  page-break-after: avoid; }
+
+input[type="submit"] {
+  display: none; }
+
+a,
+a:visited {
+  text-decoration: underline; }
+
+/* Show the URL after each link, whereby internal links are preceeded by the site's URL */
+a[href]:after {
+  content: " (https://www.acbnebraska.org/" attr(href) ")";
+  font-size: 80%;
+  word-wrap: break-word;
+  /* break long urls that donìt fit the page width */ }
+
+/* External links don't get this treatment */
+a[href^="http://"]:after,
+a[href^="https://"]:after {
+  content: " [" attr(href) "]"; }
+
+a[href^="#"]:after,
+a[href^="javascript:"]:after {
+  content: ""; }
+
+pre,
+blockquote {
+  border: 1px solid #999;
+  page-break-inside: avoid; }
+
+/*
+* Printing Tables:
+* http://css-discuss.incutio.com/wiki/Printing_Tables
+*/
+thead {
+  display: table-header-group; }
+
+tr,
+img {
+  page-break-inside: avoid; }
+
+.c-skip-link,
+.c-menu,
+.c-search,
+nav.tabs,
+footer {
+  display: none !important; }
+
+.c-header {
+  position: static; }
+
+.c-site-branding > * {
+  display: inline-block !important; }
+
+.c-site-logo:after {
+  display: none; }
+
+.c-breadcrumb {
+  display: none;
+  padding-top: 2.25em; }
+  .c-breadcrumb:before {
+    content: 'Page Breadcrumbs';
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    display: block; }
+
+.u-screen-only {
+  display: none !important; }
+
+.webwebform-section-title {
+  margin-top: 1.33em; }
+
+.form-type-checkbox label {
+  max-width: 36em; }
+
+.form-type-email input,
+.form-type-textfield input,
+.form-type-date input {
+  max-width: 100%; }
+
+.button,
+.image-button {
+  margin-left: .56em;
+  margin-right: .56em; }
+
+.form-composite > legend,
+.label {
+  font-weight: regular; }
+
+.c-fieldset-wrapper > legend .fieldset-legend {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  page-break-after: avoid; }
+
+/*# sourceMappingURL=print.css.map */

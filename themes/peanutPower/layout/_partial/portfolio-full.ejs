@@ -1,0 +1,78 @@
+<article class="dcf-wrapper nc-portfolio">
+  <header class="dcf-measure dcf-pb-6">
+    <h1 class="dcf-mb-0"><%- item.title || theme.default_post_title || "Untitled" %></h1>
+    <% if(item.project_type) { %>
+      <div class="dcf-badge dcf-pt-2 dcf-pb-2 dcf-pl-3 dcf-pr-3 dcf-txt-xs">
+        <%- item.project_type %>
+      </div>
+    <% } %>
+  </header>
+  <% if(item.brief_description) { %>
+    <section class="dcf-measure nc-portfolio-desc">
+      <h2>Brief Description</h2>
+      <%- item.brief_description %>
+      <div class="dcf-pb-6 dcf-pt-1">
+        <% if(item.website_link) { %>
+          <a class="dcf-btn dcf-btn-primary" href="<%- item.website_link %>">Visit website</a>
+        <% } %>
+        <% if(item.repo_link) { %>
+          <a class="dcf-btn dcf-btn-secondary" href="<%- item.repo_link %>">View repo</a>
+        <% } %>
+      </div>
+    </section>
+    <section class="dcf-measure nc-portfolio-role-tech">
+      <% if(item.role) { %>
+        <h2 class="dcf-txt-md">Role</h2>
+        <%- item.role %>
+      <% } %>
+      <% if(item.tech) { %>
+        <h2 class="dcf-txt-md">Technology Used</h2>
+        <ul class="dcf-multicolumn-2 dcf-multicolumn-gap">
+          <%- item.tech %>
+        </ul>
+      <% } %>
+    </section>
+    <section class="dcf-measure nc-portfolio-challenge">
+      <% if(item.challenge) { %>
+        <h2>The Challenge</h2>
+        <%- item.challenge %>
+      <% } %>
+    </section>
+    <section class="dcf-stretch nc-portfolio-screenshots-wrapper">
+      <div class="dcf-wrapper dcf-grid dcf-grid-halves dcf-col-gap-md nc-portfolio-screenshots">
+        <% if(item.old_screenshot) { %>
+          <figure class="dcf-mt-6">
+            <img src="<%- item.old_screenshot %>" alt="A screenshot of the old website">
+            <figcaption class="dcf-figcaption">A screenshot of the old website</figcaption>
+          </figure>
+        <% } %>
+        <% if(item.new_screenshot) { %>
+        <figure class="dcf-mt-6">
+            <img src="<%- item.new_screenshot %>" alt="A screenshot of the new website">
+            <figcaption class="dcf-figcaption">A screenshot of the new website</figcaption>
+          </figure>
+        <% } %>
+      </div>
+    </section>
+    <section class="dcf-measure nc-portfolio-challenge">
+      <% if(item.process) { %>
+        <h2>The Process Taken</h2>
+        <%- item.process %>
+      <% } %>
+    </section>
+    <section class="dcf-measure nc-portfolio-challenge">
+      <% if(item.result) { %>
+        <h2>Result</h2>
+        <%- item.result %>
+      <% } %>
+    </section>
+    <section class="dcf-measure nc-portfolio-challenge">
+      <% if(item.client_feedback) { %>
+        <h2>Client Feedback</h2>
+        <%- item.client_feedback %>
+      <% } %>
+    </section>
+  <% } %>
+
+</article>
+

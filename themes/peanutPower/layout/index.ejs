@@ -1,0 +1,15 @@
+<section class="dcf-wrapper nc-portfolio">
+    <div class="dcf-measure">
+        <h1>Hello! <br> I'm Natalie Chin.</h1>
+        <p>My previous job title was E-Learning Developer and I was transforming face-to-face training to online learning. Facing limitations in eLearing authoring tool, I looked to web development languages for flexibility to build more dynamic online learning tutorials. It was this moment that I find myself amazed at what web development can do and slowly my interest moved toward Front-end web development.</p>
+        <p>I am a motivated front-end web designer/developer who is constantly looking for ways to write better code and improve my skills. This is a portfolio of projects I have worked on. Dig away.</p>
+    </div>
+</section>
+
+<section class="dcf-wrapper nc-portfolio">
+    <ul class="dcf-list-bare nc-portfolio-teaser-wrapper dcf-pt-6">
+        <% page.posts.forEach(function(item){ %>
+            <%- partial('_partial/portfolio-index', {item: item}) %>
+        <% }); %>
+    </ul>
+</section>

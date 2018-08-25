@@ -1,0 +1,128 @@
+.nc-portfolio {
+    overflow: hidden;
+
+    >*:not(.nc-portfolio-screenshots-wrapper) {
+        margin-left: #{ms(15)}rem;
+
+        @include mq(md, max, width) {
+            margin-left: #{ms(5)}rem;
+        }
+    }
+    &-desc {
+        p {
+            &::first-letter {
+                font-size: #{ms(11)}em; // 5.26em
+                line-height: 0.5;
+                margin-top: 1.7rem;
+                height: 0.4em;
+                padding-right: #{ms(-4)}rem; // .56rem
+                @include font-serif;
+                float: left;
+                color: $dark-teal;
+
+                    // font-size: 5.4em;
+                    // line-height: 0.5;
+                    // margin-top: 1.7rem;
+                    // height: 0.4em;
+                    // padding-right: .5625rem;
+                    // font-family: Karma,
+                    // Georgia,
+                    // serif;
+                    // float: left;
+            }
+        }
+    }
+    &-role-tech{
+        border: 1px solid $ui-500;
+        background-color: $color-body-bg;
+        @include pl-6;
+        @include pr-6;
+        @include pt-4;
+        @include pb-4;
+    }
+
+    &-screenshots-wrapper {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: 0;
+            background-color: $ui-100;
+            width: 5em;
+            height: 250em;
+            bottom: 15%;
+            z-index: -2;
+
+            @include mq(sm, max, width) {
+                width: 2em;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            background-color: $ui-100;
+            width: 5em;
+            height: 250em;
+            bottom: -240em;
+            z-index: -2;
+
+            @include mq(sm, max, width) {
+                width: 2em;
+            }
+        }
+    }
+
+    &-screenshots {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 6%;
+            width: 100%;
+            height: 73%;
+            z-index: -1;
+            background-color: $teal;
+        }
+        img {
+            border: 1px solid $ui-500;
+        }
+    }
+
+    // Front page teaser
+    &-teaser-wrapper {
+        display: grid;
+        @include col-gap-md;
+        @include row-gap-md;
+        grid-template-columns: repeat(3, 1fr);
+
+
+    }
+
+    &-cover-img {
+        max-height: 15em;
+        // border: 5px solid $teal;
+    }
+
+    &-tech-inline {
+        // display: inline;
+        margin: 0;
+        padding: 0;
+
+        > li {
+            display: inline;
+            list-style-type: none;
+
+            &:after {
+                content: ", ";
+            }
+
+            &:last-child:after {
+                content: "";
+            }
+        }
+    }
+}

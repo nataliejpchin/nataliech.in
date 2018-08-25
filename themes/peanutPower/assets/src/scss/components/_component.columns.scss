@@ -1,0 +1,13 @@
+////////////////////////////////
+// !THEME / COMPONENTS / COLUMNS
+////////////////////////////////
+.nc-theme {
+    .dcf-multicolumn-2 {
+        column-count: 2;
+        column-width: 150px;
+    }
+
+    .dcf-multicolumn-gap {
+        column-gap: #{ms(6)}em;
+    }
+}

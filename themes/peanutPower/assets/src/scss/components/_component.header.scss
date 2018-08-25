@@ -1,0 +1,42 @@
+.nc-theme {
+    .dcf-logo-link {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 4em;
+            width: 0.3em;
+            background-color: $teal;
+            top: -$length-em-2;
+            left: 0.2em;
+
+            @include mq(md, max, width) {
+                height: 1.5em;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            height: 26em;
+            width: 0.3em;
+            background-color: $teal;
+            top: 100%;
+            left: 0.2em;
+        }
+    }
+    .logo {
+        height: auto;
+        width: 2em;
+        padding-top:4em;
+        padding-bottom:0.9em;
+
+        @include mq(md, max, width) {
+            padding-top:2em;
+            width: 4%;
+        }
+    }
+}

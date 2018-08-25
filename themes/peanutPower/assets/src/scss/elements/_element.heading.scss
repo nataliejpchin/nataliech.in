@@ -1,0 +1,14 @@
+h1 {
+    background: rgb(20, 75, 96);
+    background: linear-gradient(90deg, rgba(20, 75, 96, 1) 0%, rgba(28, 142, 118, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    padding-top: #{ms(4)}em;
+}

@@ -1,0 +1,9 @@
+/////////////////////////////////
+// !THEME / COMPONENTS / HEADINGS
+/////////////////////////////////
+
+h1 {
+    .fonts-loaded & {
+        @include font-serif;
+    }
+}

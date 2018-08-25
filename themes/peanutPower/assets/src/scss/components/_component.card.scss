@@ -1,0 +1,14 @@
+.nc-card {
+    border: 1px solid rgba($teal, 0.5);
+    box-shadow: 0 1px 4px 0 rgba($teal, 0.2);
+
+    &-preview-image {
+        border-bottom: 1px solid rgba($teal, 0.5);
+    }
+
+    &-details {
+        dd {
+            padding-left: #{ms(1)}em;
+        }
+    }
+}
