@@ -7,6 +7,8 @@
     }
 
     &-details {
+        background-color: $white;
+        
         dd {
             padding-left: #{ms(1)}em;
         }

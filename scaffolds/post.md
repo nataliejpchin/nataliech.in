@@ -6,7 +6,7 @@ date: {{ date }}
 ? old_screenshot
 ? new_screenshot
 ? project_type
-? client_location
+? client
 ? brief_description
 ? website_link
 ? repo_link

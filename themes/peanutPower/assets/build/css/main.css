@@ -389,16 +389,6 @@ section {
 body {
   position: relative; }
 
-header {
-  color: #fff;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-          justify-content: flex-start;
-  position: relative; }
-
 h1 {
   background: #144b60;
   background: -webkit-gradient(linear, left top, right top, from(#144b60), to(#1c8e76));
@@ -1070,9 +1060,6 @@ a.dcf-calendar-date-active:focus {
   color: #787979;
   font-size: 0.75em; }
 
-.dcf-label {
-  flex-shrink: 0; }
-
 .dcf-input-text {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1217,32 +1204,25 @@ button .dcf-icon {
     grid-template-columns: 1fr 1fr;
     grid-gap: 3.16049em 5vw; } }
 
-.dcf-input-group-form {
-  -webkit-box-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap; }
-
 .dcf-input-group {
   display: -webkit-box;
   display: flex;
-  -webkit-box-flex: 1;
-          flex: 1 1 50%; }
+  width: 100%; }
 
 .dcf-input-group .dcf-input-text {
   -webkit-box-flex: 1;
-          flex: 1 1 auto; }
-
-.dcf-input-group,
-.dcf-input-group .dcf-input-text {
-  min-width: 0; }
+          flex-grow: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 1%; }
 
 .dcf-input-group .dcf-btn {
   -webkit-box-align: center;
           align-items: center;
   display: -webkit-box;
-  display: flex; }
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 0; }
 
 .dcf-input-group-addon {
   -webkit-box-align: center;
@@ -1496,8 +1476,10 @@ button .dcf-icon {
           box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3); }
   .nc-card-preview-image {
     border-bottom: 1px solid rgba(115, 227, 204, 0.5); }
-  .nc-card-details dd {
-    padding-left: 1.125em; }
+  .nc-card-details {
+    background-color: #fff; }
+    .nc-card-details dd {
+      padding-left: 1.125em; }
 
 .nc-theme .dcf-multicolumn-2 {
   -webkit-column-count: 2;
@@ -1508,6 +1490,16 @@ button .dcf-icon {
 .nc-theme .dcf-multicolumn-gap {
   -webkit-column-gap: 2.37037em;
           column-gap: 2.37037em; }
+
+.nc-curvy {
+  position: absolute;
+  width: 100vw;
+  height: 20vw;
+  top: 0;
+  left: 0;
+  margin-left: 0 !important;
+  fill: #67e2c9;
+  z-index: -1; }
 
 .nc-main-footer {
   border-top: 1px solid #a7a7a7; }
@@ -1541,7 +1533,8 @@ button .dcf-icon {
       width: 4%; } }
 
 .nc-portfolio {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 5.61866rem; }
   .nc-portfolio > *:not(.nc-portfolio-screenshots-wrapper) {
     margin-left: 8.42798rem; }
     @media only screen and (max-width: 55.925em) {
@@ -1601,6 +1594,19 @@ button .dcf-icon {
       background-color: #73E3CC; }
     .nc-portfolio-screenshots img {
       border: 1px solid #a7a7a7; }
+  .nc-portfolio-teaser-index {
+    position: relative; }
+    .nc-portfolio-teaser-index::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 20vw;
+      z-index: -1;
+      background: -webkit-gradient(linear, left top, left bottom, from(#67e2c9), color-stop(78%, rgba(255, 255, 255, 0)));
+      background: -webkit-linear-gradient(top, #67e2c9 0%, rgba(255, 255, 255, 0) 78%);
+      background: linear-gradient(to bottom, #67e2c9 0%, rgba(255, 255, 255, 0) 78%); }
   .nc-portfolio-teaser-wrapper {
     display: grid;
     grid-column-gap: 1.77778em;
@@ -1618,30 +1624,6 @@ button .dcf-icon {
         content: ", "; }
       .nc-portfolio-tech-inline > li:last-child:after {
         content: ""; }
-
-.nc-curvy {
-  position: absolute;
-  width: 100vw;
-  height: 20vw;
-  top: 0;
-  left: 0;
-  margin-left: 0 !important;
-  fill: #67e2c9;
-  z-index: -1; }
-
-.nc-portflio-index {
-  position: relative; }
-  .nc-portflio-index::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 20vw;
-    z-index: -1;
-    background: -webkit-gradient(linear, left top, left bottom, from(#67e2c9), color-stop(78%, rgba(255, 255, 255, 0)));
-    background: -webkit-linear-gradient(top, #67e2c9 0%, rgba(255, 255, 255, 0) 78%);
-    background: linear-gradient(to bottom, #67e2c9 0%, rgba(255, 255, 255, 0) 78%); }
 
 .typing > * {
   overflow: hidden;
