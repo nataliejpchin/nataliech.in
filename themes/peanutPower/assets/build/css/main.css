@@ -1717,6 +1717,9 @@ button .dcf-icon {
   -webkit-animation: fade-up 2s forwards ease-out;
           animation: fade-up 2s forwards ease-out; }
 
+#typewriter {
+  min-height: 2.8em; }
+
 .dcf-ratio {
   position: relative; }
   .dcf-ratio::before {
