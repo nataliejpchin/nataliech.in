@@ -126,3 +126,28 @@
         }
     }
 }
+.nc-curvy {
+    position: absolute;
+    width: 100vw;
+    height: 20vw;
+    top: 0;
+    left: 0;
+    margin-left:0!important;
+    fill: #67e2c9;
+    z-index:-1;
+}
+.nc-portflio-index {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content:'';
+        width: 100%;
+        height: 100%;
+        left:0;
+        top:20vw; //after the height of the svg header
+        z-index: -1;
+				background: linear-gradient(to bottom, rgb(103, 226, 201) 0%, rgba(255,255,255,0) 78%);
+
+    }
+}
