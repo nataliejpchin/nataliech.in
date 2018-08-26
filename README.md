@@ -11,4 +11,4 @@ $ cd <folder>
 $ npm install
 
 ### Theme installation
-Go into themes/peanutPoer folder and run npm install
+Go into themes/peanutPower folder and run npm install
