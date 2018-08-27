@@ -1350,7 +1350,7 @@ button .dcf-icon {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-family: "Raleway", Verdana, serif;
+  font-family: "Assistant", Verdana, serif;
   font-size: 0.75em;
   font-weight: bold;
   letter-spacing: 0.1em;
@@ -1714,7 +1714,7 @@ button .dcf-icon {
   color: #144b60; }
 
 .fonts-loaded body {
-  font-family: "Raleway", Verdana, serif; }
+  font-family: "Assistant", Verdana, serif; }
 
 .nc-theme main {
   position: relative; }
