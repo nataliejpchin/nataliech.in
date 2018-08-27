@@ -1,6 +1,11 @@
 .nc-portfolio {
     overflow: hidden;
-    padding-bottom: #{ms(12)}rem;
+    padding-bottom: #{ms(6)}rem;
+
+
+		@include mq(sm, min, width) {
+			padding-bottom: #{ms(12)}rem;
+		}
 
     >*:not(.nc-portfolio-screenshots-wrapper) {
         margin-left: #{ms(15)}rem;
@@ -13,7 +18,7 @@
         p {
             &::first-letter {
                 font-size: #{ms(11)}em; // 5.26em
-                line-height: 0.5;
+                line-height: 0.53;
                 margin-top: 1.7rem;
                 height: 0.4em;
                 padding-right: #{ms(-4)}rem; // .56rem
@@ -34,7 +39,7 @@
         }
     }
     &-role-tech{
-        border: 1px solid $ui-500;
+        border: 1px solid rgba(21,83,99,0.28);
         background-color: $color-body-bg;
         @include pl-6;
         @include pr-6;
@@ -50,6 +55,7 @@
             position: absolute;
             right: 0;
             background-color: $ui-100;
+						background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23165d66' fill-opacity='0.13' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
             width: 5em;
             height: 250em;
             bottom: 15%;
@@ -65,6 +71,7 @@
             position: absolute;
             left: 0;
             background-color: $ui-100;
+						background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23165d66' fill-opacity='0.13' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
             width: 5em;
             height: 250em;
             bottom: -240em;
@@ -79,17 +86,17 @@
     &-screenshots {
         position: relative;
 
-        &:before {
-            content: "";
-            position: absolute;
-            bottom: 6%;
-            width: 100%;
-            height: 73%;
-            z-index: -1;
-            background-color: $teal;
-        }
+        //&:before {
+        //    content: "";
+        //    position: absolute;
+        //    bottom: 6%;
+        //    width: 100%;
+        //    height: 73%;
+        //    z-index: -1;
+        //    background-color: $teal;
+        //}
         img {
-            border: 1px solid $ui-500;
+					box-shadow: 0 1px 5px 0 rgba(0,0,0,.25);
         }
     }
 
@@ -104,8 +111,14 @@
             left: 0;
             top: 20vw; //after the height of the svg header
             z-index: -1;
-            background: linear-gradient(to bottom, rgb(103, 226, 201) 0%, rgba(255, 255, 255, 0) 78%);
+            background: linear-gradient(to bottom, rgb(103, 226, 201) 0%, rgba(255, 255, 255, 0) 90%);
+
+						@include mq(sm, min, width) {
+							background: linear-gradient(to bottom, rgb(103, 226, 201) 0%, rgba(255, 255, 255, 0) 78%);
+						}
         }
+
+
     }
 
     &-teaser-wrapper {
@@ -144,4 +157,18 @@
             }
         }
     }
+
+	&-challenge {
+		@include pl-6;
+		@include pr-6;
+		@include pt-4;
+		@include pb-4;
+	}
+
+	&-curvy {
+		position: absolute;
+		z-index: -1;
+		fill: $teal;
+		fill-opacity: 0.89;
+	}
 }

@@ -19,7 +19,7 @@ function setupTypewriter(t) {
 			tag = "",
 			writingTag = false,
 			tagOpen = false,
-			typeSpeed = 100,
+			typeSpeed = 50,
 			tempTypeSpeed = 0;
 
 	var type = function() {
@@ -77,8 +77,7 @@ function setupTypewriter(t) {
 
 var typewriter = document.getElementById('typewriter');
 
-typewriter = setupTypewriter(typewriter);
-
-typewriter.type();
-
-
+if (typewriter) {
+	typewriter = setupTypewriter(typewriter);
+	typewriter.type();
+}
