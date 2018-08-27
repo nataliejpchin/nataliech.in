@@ -1511,8 +1511,6 @@ button .dcf-icon {
   margin-left: 0 !important;
   fill: #67e2c9;
   z-index: -1; }
-  .nc-curvy include mq(sm, max, width) {
-    grid-template-columns: 1fr; }
 
 .nc-main-footer {
   border-top: 1px solid rgba(21, 83, 99, 0.2); }
@@ -1534,6 +1532,9 @@ button .dcf-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23164b60' fill-opacity='0.47'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
     -webkit-transform: skewY(-30deg);
             transform: skewY(-30deg); }
+    @media only screen and (max-width: 55.925em) {
+      .nc-theme .dcf-logo-link:after {
+        width: 4%; } }
 
 .nc-theme .logo {
   height: auto;
