@@ -1534,7 +1534,8 @@ button .dcf-icon {
             transform: skewY(-30deg); }
     @media only screen and (max-width: 55.925em) {
       .nc-theme .dcf-logo-link:after {
-        width: 4%; } }
+        width: 4%;
+        left: -0.7em; } }
 
 .nc-theme .logo {
   height: auto;
@@ -1544,7 +1545,9 @@ button .dcf-icon {
   @media only screen and (max-width: 55.925em) {
     .nc-theme .logo {
       padding-top: 2em;
-      width: 4%; } }
+      width: 4%;
+      position: relative;
+      left: -0.7em; } }
 
 .nc-portfolio {
   overflow: hidden;
@@ -1559,7 +1562,7 @@ button .dcf-icon {
         margin-left: 2.0rem; } }
   .nc-portfolio-desc p::first-letter {
     font-size: 4.74074em;
-    line-height: 0.5;
+    line-height: 0.53;
     margin-top: 1.7rem;
     height: 0.4em;
     padding-right: 0.5625rem;
@@ -1567,7 +1570,7 @@ button .dcf-icon {
     float: left;
     color: #144b60; }
   .nc-portfolio-role-tech {
-    border: 1px solid #a7a7a7;
+    border: 1px solid rgba(21, 83, 99, 0.28);
     background-color: #fbfbfb;
     padding-left: 1.77778em;
     padding-right: 1.77778em;
@@ -1580,6 +1583,7 @@ button .dcf-icon {
       position: absolute;
       right: 0;
       background-color: #f1f1f1;
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23165d66' fill-opacity='0.13' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
       width: 5em;
       height: 250em;
       bottom: 15%;
@@ -1592,6 +1596,7 @@ button .dcf-icon {
       position: absolute;
       left: 0;
       background-color: #f1f1f1;
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23165d66' fill-opacity='0.13' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
       width: 5em;
       height: 250em;
       bottom: -240em;
@@ -1601,16 +1606,9 @@ button .dcf-icon {
           width: 2em; } }
   .nc-portfolio-screenshots {
     position: relative; }
-    .nc-portfolio-screenshots:before {
-      content: "";
-      position: absolute;
-      bottom: 6%;
-      width: 100%;
-      height: 73%;
-      z-index: -1;
-      background-color: #73E3CC; }
     .nc-portfolio-screenshots img {
-      border: 1px solid #a7a7a7; }
+      -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25);
+              box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25); }
   .nc-portfolio-teaser-index {
     position: relative; }
     .nc-portfolio-teaser-index::before {
@@ -1624,11 +1622,11 @@ button .dcf-icon {
       background: -webkit-gradient(linear, left top, left bottom, from(#67e2c9), color-stop(90%, rgba(255, 255, 255, 0)));
       background: -webkit-linear-gradient(top, #67e2c9 0%, rgba(255, 255, 255, 0) 90%);
       background: linear-gradient(to bottom, #67e2c9 0%, rgba(255, 255, 255, 0) 90%); }
-    @media only screen and (min-width: 41.95625em) {
-      .nc-portfolio-teaser-index {
-        background: -webkit-gradient(linear, left top, left bottom, from(#67e2c9), color-stop(78%, rgba(255, 255, 255, 0)));
-        background: -webkit-linear-gradient(top, #67e2c9 0%, rgba(255, 255, 255, 0) 78%);
-        background: linear-gradient(to bottom, #67e2c9 0%, rgba(255, 255, 255, 0) 78%); } }
+      @media only screen and (min-width: 41.95625em) {
+        .nc-portfolio-teaser-index::before {
+          background: -webkit-gradient(linear, left top, left bottom, from(#67e2c9), color-stop(78%, rgba(255, 255, 255, 0)));
+          background: -webkit-linear-gradient(top, #67e2c9 0%, rgba(255, 255, 255, 0) 78%);
+          background: linear-gradient(to bottom, #67e2c9 0%, rgba(255, 255, 255, 0) 78%); } }
   .nc-portfolio-teaser-wrapper {
     display: grid;
     grid-column-gap: 1.77778em;
@@ -1652,6 +1650,16 @@ button .dcf-icon {
         content: ", "; }
       .nc-portfolio-tech-inline > li:last-child:after {
         content: ""; }
+  .nc-portfolio-challenge {
+    padding-left: 1.77778em;
+    padding-right: 1.77778em;
+    padding-top: 1em;
+    padding-bottom: 1em; }
+  .nc-portfolio-curvy {
+    position: absolute;
+    z-index: -1;
+    fill: #73E3CC;
+    fill-opacity: 0.89; }
 
 .typing > * {
   overflow: hidden;

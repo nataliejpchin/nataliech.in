@@ -77,8 +77,7 @@ function setupTypewriter(t) {
 
 var typewriter = document.getElementById('typewriter');
 
-typewriter = setupTypewriter(typewriter);
-
-typewriter.type();
-
-
+if (typewriter) {
+	typewriter = setupTypewriter(typewriter);
+	typewriter.type();
+}

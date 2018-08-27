@@ -30,6 +30,7 @@
 
             @include mq(md, max, width) {
                 width: 4%;
+                left: -0.7em;
             }
         }
     }
@@ -42,6 +43,8 @@
         @include mq(md, max, width) {
             padding-top:2em;
             width: 4%;
+            position: relative;
+            left: -0.7em;
         }
     }
 }
