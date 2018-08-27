@@ -100,7 +100,8 @@
         //}
 
         figure {
-            max-width: 45%;
+            padding: #{ms(0)}rem;
+            flex: 1;
         }
 
         img {

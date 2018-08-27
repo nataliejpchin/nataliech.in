@@ -3,8 +3,8 @@ title: Classic Arcade Game Clone
 date: 2018-08-26 09:21:12
 tags:
 cover_image: "arcade-game-cover.jpg"
-old_screenshot: 
-new_screenshot: "arcade-game.png"
+left_screenshot: "arcade-game.png"
+left_alt_tag: "Screenshot of game"
 project_type: Arcade game
 client:
 brief_description: As part of my Udacity Front-end Nanodegree Program, I was required to clone a classic arcade game, Frogger, with art assets and game engine provided by Udacity. The goal of the game is to move the character to the water using the arrow keys without colliding into any of the enemies. The enemies move in varying speeds on the paved block portion of the scene. If the character collides with an enemy, the game is reset and the character is moved back to the starting square. When the character reached the water, the player won and the character is also moved back to the beginning.

@@ -3,8 +3,8 @@ title: Resume Exercise
 date: 2018-08-26 09:10:44
 tags:
 cover_image: "resume-cover.jpg"
-old_screenshot:
-new_screenshot: "resume.png"
+left_screenshot: "resume.png"
+left_alt_tag: "Screenshot of resume exercise website"
 project_type: Exercise to practice Javascript 
 client:
 brief_description: "As part of my Udacity Frontend Web Developer Nanodegree course, I was required to create an interactive online resume." 

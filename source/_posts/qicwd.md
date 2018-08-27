@@ -3,8 +3,10 @@ title: QIC-WD
 date: 2018-08-26 09:44:27
 tags:
 cover_image: "qicwd-cover.jpg"
-old_screenshot: "qicwd-simple.png"
-new_screenshot: "qicwd-drupal.png"
+left_screenshot: "qicwd-simple.png"
+left_alt_tag: "Screenshot of simple static website"
+right_screenshot: "qicwd-drupal.png"
+right_alt_tag: "Screenshot of drupal website"
 project_type: Website Design and Development
 client:
 brief_description: "This website was created for a newly awarded grant to be a collaboration platform for chosen public and tribal child welfare agencies. It also serves as an informational resource to state agencies and the public through blog posts, social media, and eventually a catalog of known-working evidence-based strategies to recruit, hire, and retain a competent workforce."  

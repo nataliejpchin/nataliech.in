@@ -4,9 +4,7 @@ date: 2018-08-27 15:50:30
 tags:
 cover_image: "acbnebraska-cover.jpg"
 left_screenshot: "acbnebraska-before.png"
-left_alt_tag: "Test"
 right_screenshot: "acbnebraska-after.png"
-right_alt_tag: "Test"
 project_type: "Website Redesign"
 client_location: American Council of the Blind Nebraska
 brief_description: "<p>This project was part of a global web accessibility competition - OpenAIR: the Accessibility Internet Rally 2018 organized by Knowbility to be completed in 5 weeks. As part of a team of 3 web developers, we competed against 13 teams in the Professional Developer category. In this competition, OpenAIR partnered teams with nonprofits to create accessible websites for these organizations that will serve all populations equally, including persons with disabilities. We were judged mainly on web accessibility criterias such as:</p><ul><li>Core Accessibility (use of alt text for images, semantic markup,  color contrast, ARIA landmark roles, etc.,)</li><li>Basic Accessibility, Usability and Rally Requirements  (spelling, form controls, site map, search, etc.,)

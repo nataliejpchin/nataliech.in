@@ -53,29 +53,29 @@ L1.1-0.1z"/>
         <% if(item.right_screenshot) { %>
         <figure class="dcf-mt-6">
             <img src="<%- item.right_screenshot %>" alt="A screenshot of the new website">
-            <figcaption class="dcf-figcaption"><%- item.right_alt_tag || "A screenshot of the left website" %></figcaption>
+            <figcaption class="dcf-figcaption"><%- item.right_alt_tag || "A screenshot of the new website" %></figcaption>
           </figure>
         <% } %>
       </div>
     </section>
-    <section class="dcf-measure nc-portfolio-challenge">
-      <% if(item.process) { %>
+    <% if(item.process) { %>
+      <section class="dcf-measure nc-portfolio-challenge">
         <h2>The Process Taken</h2>
         <%- item.process %>
-      <% } %>
-    </section>
-    <section class="dcf-measure nc-portfolio-challenge">
-      <% if(item.result) { %>
+      </section>
+    <% } %>
+    <% if(item.result) { %>
+      <section class="dcf-measure nc-portfolio-result">
         <h2>Result</h2>
         <%- item.result %>
-      <% } %>
-    </section>
-    <section class="dcf-measure nc-portfolio-challenge">
-      <% if(item.client_feedback) { %>
+      </section>
+    <% } %>
+    <% if(item.client_feedback) { %>
+      <section class="dcf-measure nc-portfolio-challenge">
         <h2>Client Feedback</h2>
         <%- item.client_feedback %>
-      <% } %>
-    </section>
+      </section>
+    <% } %>
   <% } %>
 
 </article>
