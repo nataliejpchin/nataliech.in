@@ -3,7 +3,7 @@
     <a href="<%- config.root %><%- item.path %>">
       <div class="dcf-card nc-card">
         <div class="nc-card-preview-image">
-          <img class="img-fluid nc-portfolio-cover-img dcf-ratio dcf-ratio-4x3 dcf-obj-fit-cover" src="<%- config.root %><%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || theme.default_post_title || "Untitled" %>">
+          <img class="img-fluid nc-portfolio-cover-img dcf-ratio dcf-ratio-4x3 dcf-obj-fit-cover" src="<%- config.root %><%- item.path %><%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || theme.default_post_title || "Untitled" %>">
         </div>
         <div class="dcf-card-block nc-card-details">
           <h2 class="dcf-txt-lg dcf-pt-1">

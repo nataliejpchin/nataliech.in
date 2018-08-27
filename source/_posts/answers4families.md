@@ -2,9 +2,9 @@
 title: Answers4Families
 date: 2018-08-26 09:40:18
 tags:
-cover_image:
-old_screenshot:
-new_screenshot:
+cover_image: "a4f-cover.jpg"
+old_screenshot: "a4f-before.png"
+new_screenshot: "a4f-after.png"
 project_type: Website Redesign
 client:
 brief_description: This project was a challenge due to its complexity and the client’s resistance to change. It was a great learning opportunity for me in terms of improving my client communication skills and also educating others on web best practices. There were many past attempts to redesign this website by previous developers but each attempt had not been successful. Aside from dated design and many other issues, the old website was was also built using Drupal 6 which exposes numerous security risks . With my expertise and determination, I was able to work closely with the client through open communication and was able complete the design and development of this website. This website is built in Drupal 7 and is still in the works in terms of content. However, development of theme, Drupal scaffolding and feature building has been completed.
