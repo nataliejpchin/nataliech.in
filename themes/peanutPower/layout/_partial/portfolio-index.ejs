@@ -11,13 +11,14 @@
               <%- item.title || theme.default_post_title || "Untitled" %>
             </a>
           </h2>
-          <dl>
-            <% if(item.project_type) { %>
-            <dt></dt>
-            <dd><%- item.project_type %></dd>
-            <% } %>
+          <% if(item.project_type) { %>
+            <div class="dcf-badge dcf-pt-2 dcf-pb-2 dcf-pl-3 dcf-pr-3 dcf-txt-xs">
+              <%- item.project_type %>
+            </div>
+          <% } %>
+          <dl class="dcf-txt-sm">
             <% if(item.client_location) { %>
-            <dt>Client, location:</dt>
+            <dt>Client:</dt>
             <dd><%- item.client_location %></dd>
             <% } %>
             <% if(item.role) { %>
