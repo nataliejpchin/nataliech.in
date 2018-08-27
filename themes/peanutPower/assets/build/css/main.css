@@ -1477,20 +1477,27 @@ button .dcf-icon {
   background-color: #fff;
   height: 100%;
   padding-bottom: 0;
-  border: 10px solid #144b60; }
+  border: 6px solid #144b60; }
   .nc-card a {
     text-decoration: none; }
   .nc-card:hover {
     -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
-            box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3); }
+            box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+    -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#4f7888), to(#4d9f0c)) 30;
+    -webkit-border-image: -webkit-linear-gradient(#4f7888, #4d9f0c) 30;
+            border-image: -webkit-gradient(linear, left top, left bottom, from(#4f7888), to(#4d9f0c)) 30;
+            border-image: linear-gradient(#4f7888, #4d9f0c) 30; }
+    .nc-card:hover img {
+      -webkit-transform: rotate(5deg) scale(1.1);
+              transform: rotate(5deg) scale(1.1); }
   .nc-card-preview-image {
     border-bottom: 1px solid #144b60;
     overflow: hidden; }
-    .nc-card-preview-image img:hover {
-      -webkit-transform: rotate(5deg) scale(1.1);
-              transform: rotate(5deg) scale(1.1);
-      -webkit-transition: .3s ease-in-out;
-      transition: .3s ease-in-out; }
+    .nc-card-preview-image img {
+      -webkit-transition: -webkit-transform 0.3s ease-in-out;
+      transition: -webkit-transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
   .nc-card-details dd {
     padding-left: 1.125em; }
 
@@ -1532,8 +1539,8 @@ button .dcf-icon {
     top: 102%;
     background-color: #73E3CC;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23164b60' fill-opacity='0.47'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
-    -webkit-transform: skewY(-30deg);
-            transform: skewY(-30deg); }
+    -webkit-transform: skewY(-15deg);
+            transform: skewY(-15deg); }
     @media only screen and (max-width: 55.925em) {
       .nc-theme .dcf-logo-link:after {
         width: 4%;
@@ -1640,6 +1647,8 @@ button .dcf-icon {
     @media only screen and (max-width: 41.95625em) {
       .nc-portfolio-teaser-wrapper {
         grid-template-columns: 1fr; } }
+  .nc-portfolio-teaser a {
+    text-decoration: none; }
   .nc-portfolio-cover-img {
     max-height: 15em; }
   .nc-portfolio-tech-inline {
