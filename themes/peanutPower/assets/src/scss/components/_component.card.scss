@@ -3,9 +3,27 @@
     background-color: $white;
     height: 100%;
     padding-bottom: 0;
+    border: 10px solid $dark-teal;
+
+    a {
+        text-decoration: none;
+    }
+
+    &:hover {
+        box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+        
+    }
 
     &-preview-image {
-        border-bottom: 1px solid rgba($teal, 0.5);
+        border-bottom: 1px solid $dark-teal; 
+        overflow: hidden;
+
+        img {
+            &:hover {
+                transform: rotate(5deg) scale(1.1);
+                transition: .3s ease-in-out;
+            }
+        }
     }
 
     &-details {
