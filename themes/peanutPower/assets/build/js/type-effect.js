@@ -1,16 +1,5 @@
 "use strict";
 
-// function textSplit([...sets]) {
-// 	sets.forEach(set => {
-// 		const el = document.querySelector(set[0]);
-// 		el.setAttribute('aria-label', el.textContent);
-//
-// 		el.innerHTML = [...el.textContent]
-// 				.map((letter, i) => `<span class="child-${i}"aria-hidden="true">${letter}</span>`)
-// 				.join('');
-// 	})
-// };
-
 //credit: https://codepen.io/stevn/pen/jEZvXa
 function setupTypewriter(t) {
 	var HTML = t.innerHTML;
@@ -77,6 +66,8 @@ function setupTypewriter(t) {
 
 var typewriter = document.getElementById('typewriter');
 
-typewriter = setupTypewriter(typewriter);
+if (typewriter) {
+	typewriter = setupTypewriter(typewriter);
+	typewriter.type();
+}
 
-typewriter.type();
