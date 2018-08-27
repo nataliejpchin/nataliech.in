@@ -1,9 +1,10 @@
 .nc-portfolio {
     overflow: hidden;
-    padding-bottom: #{ms(12)}rem;
+    padding-bottom: #{ms(6)}rem;
+
 
 		@include mq(sm, min, width) {
-			grid-template-columns: 1fr;
+			padding-bottom: #{ms(12)}rem;
 		}
 
     >*:not(.nc-portfolio-screenshots-wrapper) {
@@ -108,8 +109,12 @@
             left: 0;
             top: 20vw; //after the height of the svg header
             z-index: -1;
-            background: linear-gradient(to bottom, rgb(103, 226, 201) 0%, rgba(255, 255, 255, 0) 78%);
+            background: linear-gradient(to bottom, rgb(103, 226, 201) 0%, rgba(255, 255, 255, 0) 90%);
         }
+
+				@include mq(sm, min, width) {
+					background: linear-gradient(to bottom, rgb(103, 226, 201) 0%, rgba(255, 255, 255, 0) 78%);
+				}
     }
 
     &-teaser-wrapper {

@@ -1515,7 +1515,7 @@ button .dcf-icon {
     grid-template-columns: 1fr; }
 
 .nc-main-footer {
-  border-top: 1px solid #a7a7a7; }
+  border-top: 1px solid rgba(21, 83, 99, 0.2); }
 
 .nc-theme .dcf-logo-link {
   display: -webkit-box;
@@ -1547,10 +1547,10 @@ button .dcf-icon {
 
 .nc-portfolio {
   overflow: hidden;
-  padding-bottom: 5.61866rem; }
+  padding-bottom: 2.37037rem; }
   @media only screen and (min-width: 41.95625em) {
     .nc-portfolio {
-      grid-template-columns: 1fr; } }
+      padding-bottom: 5.61866rem; } }
   .nc-portfolio > *:not(.nc-portfolio-screenshots-wrapper) {
     margin-left: 8.42798rem; }
     @media only screen and (max-width: 55.925em) {
@@ -1620,9 +1620,14 @@ button .dcf-icon {
       left: 0;
       top: 20vw;
       z-index: -1;
-      background: -webkit-gradient(linear, left top, left bottom, from(#67e2c9), color-stop(78%, rgba(255, 255, 255, 0)));
-      background: -webkit-linear-gradient(top, #67e2c9 0%, rgba(255, 255, 255, 0) 78%);
-      background: linear-gradient(to bottom, #67e2c9 0%, rgba(255, 255, 255, 0) 78%); }
+      background: -webkit-gradient(linear, left top, left bottom, from(#67e2c9), color-stop(90%, rgba(255, 255, 255, 0)));
+      background: -webkit-linear-gradient(top, #67e2c9 0%, rgba(255, 255, 255, 0) 90%);
+      background: linear-gradient(to bottom, #67e2c9 0%, rgba(255, 255, 255, 0) 90%); }
+    @media only screen and (min-width: 41.95625em) {
+      .nc-portfolio-teaser-index {
+        background: -webkit-gradient(linear, left top, left bottom, from(#67e2c9), color-stop(78%, rgba(255, 255, 255, 0)));
+        background: -webkit-linear-gradient(top, #67e2c9 0%, rgba(255, 255, 255, 0) 78%);
+        background: linear-gradient(to bottom, #67e2c9 0%, rgba(255, 255, 255, 0) 78%); } }
   .nc-portfolio-teaser-wrapper {
     display: grid;
     grid-column-gap: 1.77778em;
