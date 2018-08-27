@@ -39,21 +39,21 @@
       <% } %>
     </section>
     <section class="dcf-stretch nc-portfolio-screenshots-wrapper">
-      <div class="dcf-wrapper dcf-grid dcf-grid-halves dcf-col-gap-md nc-portfolio-screenshots">
-          <svg class="nc-portfolio-curvy dcf-stretch" viewBox="0 0 1 1" preserveAspectRatio="none">
-              <path d="M1.1-0.1C1.1,0.1,0.8,0.4,0.6,0.2C0.4,0.1,0.2,0.1,0,0.3v0.2l-0.1,0.4C0,0.7,0.3,0.6,0.5,0.7c0.2,0.1,0.6,0.1,0.5,0V0.5
-		L1.1-0.1z"/>
-          </svg>
-        <% if(item.old_screenshot) { %>
+      <svg class="nc-portfolio-curvy dcf-stretch" viewBox="0 0 1 1" preserveAspectRatio="none">
+          <path d="M1.1-0.1C1.1,0.1,0.8,0.4,0.6,0.2C0.4,0.1,0.2,0.1,0,0.3v0.2l-0.1,0.4C0,0.7,0.3,0.6,0.5,0.7c0.2,0.1,0.6,0.1,0.5,0V0.5
+L1.1-0.1z"/>
+      </svg>
+      <div class="dcf-wrapper nc-portfolio-screenshots">
+        <% if(item.left_screenshot) { %>
           <figure class="dcf-mt-6">
-            <img src="<%- item.old_screenshot %>" alt="A screenshot of the old website">
-            <figcaption class="dcf-figcaption">A screenshot of the old website</figcaption>
+            <img src="<%- item.left_screenshot %>" alt="item.left_alt_tag || "A screenshot of the old website">
+            <figcaption class="dcf-figcaption"><%- item.left_alt_tag || "A screenshot of the old website" %></figcaption>
           </figure>
         <% } %>
-        <% if(item.new_screenshot) { %>
+        <% if(item.right_screenshot) { %>
         <figure class="dcf-mt-6">
-            <img src="<%- item.new_screenshot %>" alt="A screenshot of the new website">
-            <figcaption class="dcf-figcaption">A screenshot of the new website</figcaption>
+            <img src="<%- item.right_screenshot %>" alt="A screenshot of the new website">
+            <figcaption class="dcf-figcaption"><%- item.right_alt_tag || "A screenshot of the left website" %></figcaption>
           </figure>
         <% } %>
       </div>

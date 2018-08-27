@@ -86,6 +86,9 @@
     &-screenshots {
         position: relative;
 
+        display: flex;
+        justify-content: space-between;
+
         //&:before {
         //    content: "";
         //    position: absolute;
@@ -95,8 +98,22 @@
         //    z-index: -1;
         //    background-color: $teal;
         //}
+
+        figure {
+            max-width: 45%;
+        }
+
         img {
-					box-shadow: 0 1px 5px 0 rgba(0,0,0,.25);
+            display: block;
+            box-shadow: 0 1px 5px 0 rgba(0,0,0,.25);
+        }
+
+        figcaption {
+            background: $dark-teal;
+            // background: linear-gradient(90deg, rgba(20, 75, 96, 1) 0%, rgba(28, 142, 118, 1) 100%);
+            background: linear-gradient(90deg, $dark-teal 0%, #4d9f0c 90%);
+            padding: #{ms(0)}rem #{ms(1)}rem;
+            color: $white;
         }
     }
 
