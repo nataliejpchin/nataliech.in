@@ -3,8 +3,8 @@ title: NDE Transition
 date: 2018-08-26 09:31:58
 tags:
 cover_image: "ndetransition-cover.jpg"
-old_screenshot: "ndetransition-before.png"
-new_screenshot: "ndetransition-after.png"
+left_screenshot: "ndetransition-before.png"
+right_screenshot: "ndetransition-after.png"
 project_type: Website Redesign
 client:
 brief_description: "This is a Drupal 7 website I architected and designed for a state department. The client
