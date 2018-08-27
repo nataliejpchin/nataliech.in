@@ -194,5 +194,9 @@
 		z-index: -1;
 		fill: $teal;
 		fill-opacity: 0.89;
+
+		&--single {
+			height: 131%;
+		}
 	}
 }
