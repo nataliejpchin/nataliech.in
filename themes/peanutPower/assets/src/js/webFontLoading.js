@@ -8,11 +8,11 @@
 
 
 let fontA = new FontFaceObserver('Karma');
-let fontB = new FontFaceObserver('Raleway');
+let fontB = new FontFaceObserver('Assistant');
 
 // adds a class on <html> element
 Promise.all([fontA.load(), fontB.load()]).then(() => {
-    document.documentElement.className += ' fonts-loaded';
+    document.documentElement.className += 'fonts-loaded';
 });
 
 // adds a class on <html> element
