@@ -7,4 +7,8 @@
     margin-left: 0 !important;
     fill: #67e2c9;
     z-index: -1;
+
+    include mq(sm, max, width) {
+        grid-template-columns: 1fr;
+    }
 }

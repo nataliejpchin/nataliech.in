@@ -1060,9 +1060,6 @@ a.dcf-calendar-date-active:focus {
   color: #787979;
   font-size: 0.75em; }
 
-.dcf-label {
-  flex-shrink: 0; }
-
 .dcf-input-text {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1207,32 +1204,25 @@ button .dcf-icon {
     grid-template-columns: 1fr 1fr;
     grid-gap: 3.16049em 5vw; } }
 
-.dcf-input-group-form {
-  -webkit-box-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap; }
-
 .dcf-input-group {
   display: -webkit-box;
   display: flex;
-  -webkit-box-flex: 1;
-          flex: 1 1 50%; }
+  width: 100%; }
 
 .dcf-input-group .dcf-input-text {
   -webkit-box-flex: 1;
-          flex: 1 1 auto; }
-
-.dcf-input-group,
-.dcf-input-group .dcf-input-text {
-  min-width: 0; }
+          flex-grow: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 1%; }
 
 .dcf-input-group .dcf-btn {
   -webkit-box-align: center;
           align-items: center;
   display: -webkit-box;
-  display: flex; }
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 0; }
 
 .dcf-input-group-addon {
   -webkit-box-align: center;
@@ -1483,13 +1473,14 @@ button .dcf-icon {
 
 .nc-card {
   -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3); }
+          box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  height: 100%;
+  padding-bottom: 0; }
   .nc-card-preview-image {
     border-bottom: 1px solid rgba(115, 227, 204, 0.5); }
-  .nc-card-details {
-    background-color: #fff; }
-    .nc-card-details dd {
-      padding-left: 1.125em; }
+  .nc-card-details dd {
+    padding-left: 1.125em; }
 
 .nc-theme .dcf-multicolumn-2 {
   -webkit-column-count: 2;
@@ -1622,6 +1613,12 @@ button .dcf-icon {
     grid-column-gap: 1.77778em;
     grid-row-gap: 1.77778em;
     grid-template-columns: repeat(3, 1fr); }
+    @media only screen and (max-width: 74.55em) {
+      .nc-portfolio-teaser-wrapper {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media only screen and (max-width: 41.95625em) {
+      .nc-portfolio-teaser-wrapper {
+        grid-template-columns: 1fr; } }
   .nc-portfolio-cover-img {
     max-height: 15em; }
   .nc-portfolio-tech-inline {
