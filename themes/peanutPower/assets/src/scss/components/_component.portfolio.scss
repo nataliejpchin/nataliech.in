@@ -2,6 +2,10 @@
     overflow: hidden;
     padding-bottom: #{ms(12)}rem;
 
+		@include mq(sm, min, width) {
+			grid-template-columns: 1fr;
+		}
+
     >*:not(.nc-portfolio-screenshots-wrapper) {
         margin-left: #{ms(15)}rem;
 
