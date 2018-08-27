@@ -134,6 +134,12 @@
         }
     }
 
+    &-teaser {
+        a {
+            text-decoration: none;
+        }
+    }
+
     &-cover-img {
         max-height: 15em;
         // border: 5px solid $teal;
