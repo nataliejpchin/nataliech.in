@@ -2,9 +2,9 @@
 title: Feedreader Jasmine Test
 date: 2018-08-26 09:28:34
 tags:
-cover_image:
+cover_image: "feedreader-cover.jpg"
 old_screenshot:
-new_screenshot:
+new_screenshot: "feedreader.png"
 project_type: Test-driven development
 client:
 brief_description: As part of my Udacity Front-end Nanodegree Program, I was given a web-based application that reads RSS feeds from various sources. I am required to use Jasmine to write a number of unit tests to test the underlying business logic of the application as well as the event handling and DOM manipulation.

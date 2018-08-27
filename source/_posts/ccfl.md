@@ -2,9 +2,9 @@
 title: Center for Children, Families, and the Law
 date: 2018-08-26 09:47:16
 tags:
-cover_image:
-old_screenshot:
-new_screenshot:
+cover_image: "ccfl-cover.jpg"
+old_screenshot: "ccfl-before.png"
+new_screenshot: "ccfl-after.png"
 project_type: Website Design
 client:
 brief_description: "This is a website I developed for the department I worked in." 
