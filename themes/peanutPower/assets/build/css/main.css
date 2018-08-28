@@ -1484,6 +1484,7 @@ button .dcf-icon {
   /* SVG animations */ }
   .nc-button-skew span:nth-child(2) {
     position: relative;
+    padding-left: 0.17798rem;
     padding-right: 1rem;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -1491,13 +1492,19 @@ button .dcf-icon {
   .nc-button-skew:hover {
     -webkit-box-shadow: 10px 10px 0 #4d9f0c;
             box-shadow: 10px 10px 0 #4d9f0c; }
-    .nc-button-skew:hover .arrow-two {
-      -webkit-animation: color_anim 1s infinite 0.4s;
-              animation: color_anim 1s infinite 0.4s; }
+    .nc-button-skew:hover span:nth-child(2) {
+      margin-right: 0.42188rem; }
     .nc-button-skew:hover .arrow-one {
       -webkit-animation: color_anim 1s infinite 0.6s;
               animation: color_anim 1s infinite 0.6s; }
+    .nc-button-skew:hover .arrow-two {
+      -webkit-transform: translateX(5px);
+              transform: translateX(5px);
+      -webkit-animation: color_anim 1s infinite 0.4s;
+              animation: color_anim 1s infinite 0.4s; }
     .nc-button-skew:hover .arrow-three {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
       -webkit-animation: color_anim 1s infinite 0.2s;
               animation: color_anim 1s infinite 0.2s; }
   .nc-button-skew .icon-arrow {
