@@ -18,7 +18,10 @@
         @include pb-4;
         // text-transform: uppercase;
         position: relative;
+        
         transform: skewX(-15deg);
+        margin-right: #{ms(0)}rem;
+        transition: all 1s ease-in-out;
 
         &:before {
             border-width: 2px;
@@ -31,80 +34,175 @@
             right: 0;
             margin: 3px;
         }
+
+        .icon-arrow-wrapper {
+            position: relative;
+            padding-left: #{ms(-12)}rem;
+            padding-right: #{ms(0)}rem;
+            transition: 0.5s;
+            display: inline;
+        }
+        
+        &:hover {
+            .icon-arrow-wrapper {
+                // margin-left: #{ms(-6)}rem;
+                margin-right: #{ms(-6)}rem;
+            }
+        }
+
+        .icon-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.5s; // width: 66px;
+            right: 0;
+        }
+
     }
 
     // !Button Hierarchy
     // !Primary Button
-    .dcf-btn-primary,
-    .dcf-btn-primary:link {
-        background-color: $color-button;
-        // border-color: $color-button;
-        color: $white;
-        transition: border $hover-off, background-color $hover-off;
-
-        &:before {
-            border-color: $teal;
+    .dcf-btn-primary {
+        &,
+        &:link {
+            background-color: $color-button;
+            // border-color: $color-button;
+            color: $white;
+            transition: border $hover-off, background-color $hover-off;
+            box-shadow: 6px 6px 0 $black;
+    
+            &:before {
+                border-color: $teal;
+            }
         }
-    }
+    
+        &:focus {
+            // box-shadow: inset 0 0 0 3px currentColor;
+            transform: skewX(-15deg) translateY(15%);
+            .arrow-one {
+                animation: primary-arrow-anim 1s infinite 0.6s;
+            }
 
-    .dcf-btn-primary:focus {
-        box-shadow: inset 0 0 0 3px currentColor;
-    }
+            .arrow-two {
+                transform: translateX(5px);
+                animation: primary-arrow-anim 1s infinite 0.4s;
+            }
 
-    .dcf-btn-primary:visited {
-        background-color: $color-button-visited;
-        // border-color: $color-button-visited;
-        color: $white;
-    }
+            .arrow-three {
+                transform: translateX(10px);
+                animation: primary-arrow-anim 1s infinite 0.2s;
+            }
+        }
+    
+        &:visited {
+            background-color: mix($white, $color-button-visited, 30%);
+            border-color: transparent;
+            color: $white;
+            box-shadow: 6px 6px 0 mix($white, $color-button-visited, 50%);
 
-    .dcf-btn-primary:hover {
-        background-color: $color-button-hover;
-        border-color: $color-button-hover;
-        color: $white;
-        transition: border $hover-on, background-color $hover-on;
-    }
+            &:before {
+                border-color: mix($white, $color-button-visited, 50%);
+            }
+        }
+    
+        &:hover {
+            background-color: $color-button-hover;
+            border-color: $color-button-hover;
+            color: $white;
+            transition: border $hover-on, background-color $hover-on;
+            box-shadow: 10px 10px 0 #4d9f0c;
 
-    .dcf-btn-primary:active,
-    .dcf-btn-primary.dcf-active {
-        background-color: $color-button-active;
-        border-color: $color-button-active;
-        color: $white;
+            .arrow-one {
+                animation: primary-arrow-anim 1s infinite 0.6s;
+            }
+    
+            .arrow-two {
+                transform: translateX(5px);
+                animation: primary-arrow-anim 1s infinite 0.4s;
+            }
+    
+            .arrow-three {
+                transform: translateX(10px);
+                animation: primary-arrow-anim 1s infinite 0.2s;
+            }
+        }
+    
+        &:active,
+        &.dcf-active {
+            background-color: $color-button-active;
+            border-color: $color-button-active;
+            color: $white;
+        }
+    
+        
     }
-
     // !Secondary Button
-    .dcf-btn-secondary,
-    .dcf-btn-secondary:link {
-        background-color: $teal;
-        // border-color: currentColor;
-        color: $color-button;
-        transition: background-color $hover-off, border-color $hover-off, color $hover-off;
+    .dcf-btn-secondary {
+        &,
+        &:link {
+            background-color: $teal; // border-color: currentColor;
+            color: $color-button;
+            transition: background-color $hover-off, border-color $hover-off, color $hover-off;
+            box-shadow: 6px 6px 0 $black;
+        }
 
-        &:before {
-            border-color: $color-button;
+        &:focus {
+            transform: skewX(-15deg) translateY(15%);
+
+            .arrow-one {
+                animation: secondary-arrow-anim 1s infinite 0.6s;
+            }
+
+            .arrow-two {
+                transform: translateX(5px);
+                animation: secondary-arrow-anim 1s infinite 0.4s;
+            }
+
+            .arrow-three {
+                transform: translateX(10px);
+                animation: secondary-arrow-anim 1s infinite 0.2s;
+            }
+        }
+
+        &:visited {
+
+            background-color: mix($white, $color-button-visited, 30%);
+            border-color: transparent;
+            color: $white;
+            box-shadow: 6px 6px 0 mix($white, $color-button-visited, 50%);
+            &:before {
+                border-color: mix($white, $color-button-visited, 50%);
+            }
+        }
+
+        &:hover {
+            background-color: fade-out($color-button-hover, .9);
+            border-color: currentColor;
+            color: $color-button-hover;
+            transition: background-color $hover-on, border-color $hover-on, color $hover-on;
+            box-shadow: 10px 10px 0 #4d9f0c;
+            .arrow-one {
+                animation: secondary-arrow-anim 1s infinite 0.6s;
+            }
+
+            .arrow-two {
+                transform: translateX(5px);
+                animation: secondary-arrow-anim 1s infinite 0.4s;
+            }
+
+            .arrow-three {
+                transform: translateX(10px);
+                animation: secondary-arrow-anim 1s infinite 0.2s;
+            }
+        }
+
+        &:active,
+        &.dcf-active {
+            border-color: currentColor;
+            background-color: fade-out($color-button-hover, .9);
         }
     }
-
-    .dcf-btn-secondary:focus {
-        box-shadow: inset 0 0 0 3px $white, inset 0 0 0 4px currentColor;
-    }
-
-    .dcf-btn-secondary:visited {
-        // border-color: currentColor;
-        color: $color-button-visited;
-    }
-
-    .dcf-btn-secondary:hover {
-        background-color: fade-out($color-button-hover, .9);
-        border-color: currentColor;
-        color: $color-button-hover;
-        transition: background-color $hover-on, border-color $hover-on, color $hover-on;
-    }
-
-    .dcf-btn-secondary:active,
-    .dcf-btn-secondary.dcf-active {
-        border-color: currentColor;
-        color: $color-button-active;
-    }
+    
 
     // !Tertiary Button
     .dcf-btn-tertiary,
@@ -163,66 +261,46 @@
     }
 }
 
-.nc-button-skew {
-    box-shadow: 6px 6px 0 $black;
-    transform: skewX(-15deg);
-    margin-right: #{ms(0)}rem;
-    transition: all 1s ease-in-out;
-    
-    span {
-        // transform: skewX(15deg);
+// .nc-button-skew {
+   
+//     &:hover {
+//         box-shadow: 10px 10px 0 #4d9f0c;
 
-        &:nth-child(2) {
-            position: relative;
-            padding-left: #{ms(-12)}rem;
-            padding-right: #{ms(0)}rem;
-            transition: 0.5s;
-            display: inline;
-        }
+//         .arrow-one {
+//             animation: primary-arrow-anim 1s infinite 0.6s;
+//         }
+//         .arrow-two {
+//             transform: translateX(5px);
+//             animation: primary-arrow-anim 1s infinite 0.4s;
+//         }
+//         .arrow-three {
+//             transform: translateX(10px);
+//             animation: primary-arrow-anim 1s infinite 0.2s;
+//         }    
+//     }
+// }
+
+/* SVG animations */
+@keyframes primary-arrow-anim {
+    0% {
+        fill: $white;
     }
-    
-    &:hover {
-        span:nth-child(2) {
-            // margin-left: #{ms(-6)}rem;
-            margin-right: #{ms(-6)}rem;
-        }
-        box-shadow: 10px 10px 0 #4d9f0c;
-        .arrow-one {
-            animation: color_anim 1s infinite 0.6s;
-        }
-        .arrow-two {
-            transform: translateX(5px);
-            animation: color_anim 1s infinite 0.4s;
-        }
-        .arrow-three {
-            transform: translateX(10px);
-            animation: color_anim 1s infinite 0.2s;
-        }
-    
-    
+    50% {
+        fill:#4d9f0c;
     }
-
-    .icon-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: 0.5s;
-        // width: 66px;
-        right:0;
-        
+    100% {
+        fill: $white;
     }
+}
 
-
-    /* SVG animations */
-    @keyframes color_anim {
-        0% {
-            fill: $dark-teal;
-        }
-        50% {
-            fill:#4d9f0c;
-        }
-        100% {
-            fill: $dark-teal;
-        }
+@keyframes secondary-arrow-anim {
+    0% {
+        fill: $dark-teal;
+    }
+    50% {
+        fill: #4d9f0c;
+    }
+    100% {
+        fill: $dark-teal;
     }
 }

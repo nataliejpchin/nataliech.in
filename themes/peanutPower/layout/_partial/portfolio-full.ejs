@@ -24,9 +24,9 @@
       <%- item.brief_description %>
       <div class="dcf-pb-6 dcf-pt-1">
         <% if(item.website_link) { %>
-          <a class="dcf-btn dcf-btn-primary nc-button-skew" href="<%- item.website_link %>">
+          <a class="dcf-btn dcf-btn-primary" href="<%- item.website_link %>">
             <span>Visit website</span>
-            <span>
+            <span class="icon-arrow-wrapper">
               <svg class="icon icon-arrow">
                 <use xlink:href="#arrow" class="arrow-one"></use>
                 <use xlink:href="#arrow" class="arrow-two"></use>
@@ -36,9 +36,9 @@
           </a>
         <% } %>
         <% if(item.repo_link) { %>
-          <a class="dcf-btn dcf-btn-secondary nc-button-skew" href="<%- item.repo_link %>">
+          <a class="dcf-btn dcf-btn-secondary" href="<%- item.repo_link %>">
             <span>View repo</span>
-            <span>
+            <span class="icon-arrow-wrapper">
               <svg class="icon icon-arrow">
                 <use xlink:href="#arrow" class="arrow-one"></use>
                 <use xlink:href="#arrow" class="arrow-two"></use>

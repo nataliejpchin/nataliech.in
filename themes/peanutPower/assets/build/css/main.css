@@ -1350,7 +1350,10 @@ button .dcf-icon {
   padding-bottom: 1em;
   position: relative;
   -webkit-transform: skewX(-15deg);
-          transform: skewX(-15deg); }
+          transform: skewX(-15deg);
+  margin-right: 1rem;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
   .nc-theme .dcf-btn:before {
     border-width: 2px;
     border-style: solid;
@@ -1361,66 +1364,146 @@ button .dcf-icon {
     left: 0;
     right: 0;
     margin: 3px; }
+  .nc-theme .dcf-btn .icon-arrow-wrapper {
+    position: relative;
+    padding-left: 0.17798rem;
+    padding-right: 1rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    display: inline; }
+  .nc-theme .dcf-btn:hover .icon-arrow-wrapper {
+    margin-right: 0.42188rem; }
+  .nc-theme .dcf-btn .icon-arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    right: 0; }
 
-.nc-theme .dcf-btn-primary,
-.nc-theme .dcf-btn-primary:link {
+.nc-theme .dcf-btn-primary, .nc-theme .dcf-btn-primary:link {
   background-color: #144b60;
   color: #fff;
   -webkit-transition: border 400ms ease-out, background-color 400ms ease-out;
-  transition: border 400ms ease-out, background-color 400ms ease-out; }
-  .nc-theme .dcf-btn-primary:before,
-  .nc-theme .dcf-btn-primary:link:before {
+  transition: border 400ms ease-out, background-color 400ms ease-out;
+  -webkit-box-shadow: 6px 6px 0 #3B3C3C;
+          box-shadow: 6px 6px 0 #3B3C3C; }
+  .nc-theme .dcf-btn-primary:before, .nc-theme .dcf-btn-primary:link:before {
     border-color: #73E3CC; }
 
 .nc-theme .dcf-btn-primary:focus {
-  -webkit-box-shadow: inset 0 0 0 3px currentColor;
-          box-shadow: inset 0 0 0 3px currentColor; }
+  -webkit-transform: skewX(-15deg) translateY(15%);
+          transform: skewX(-15deg) translateY(15%); }
+  .nc-theme .dcf-btn-primary:focus .arrow-one {
+    -webkit-animation: primary-arrow-anim 1s infinite 0.6s;
+            animation: primary-arrow-anim 1s infinite 0.6s; }
+  .nc-theme .dcf-btn-primary:focus .arrow-two {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+    -webkit-animation: primary-arrow-anim 1s infinite 0.4s;
+            animation: primary-arrow-anim 1s infinite 0.4s; }
+  .nc-theme .dcf-btn-primary:focus .arrow-three {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    -webkit-animation: primary-arrow-anim 1s infinite 0.2s;
+            animation: primary-arrow-anim 1s infinite 0.2s; }
 
 .nc-theme .dcf-btn-primary:visited {
-  background-color: #0b2a36;
-  color: #fff; }
+  background-color: #546a72;
+  border-color: transparent;
+  color: #fff;
+  -webkit-box-shadow: 6px 6px 0 #85959a;
+          box-shadow: 6px 6px 0 #85959a; }
+  .nc-theme .dcf-btn-primary:visited:before {
+    border-color: #85959a; }
 
 .nc-theme .dcf-btn-primary:hover {
   background-color: #0b2a36;
   border-color: #0b2a36;
   color: #fff;
   -webkit-transition: border 200ms ease-out, background-color 200ms ease-out;
-  transition: border 200ms ease-out, background-color 200ms ease-out; }
+  transition: border 200ms ease-out, background-color 200ms ease-out;
+  -webkit-box-shadow: 10px 10px 0 #4d9f0c;
+          box-shadow: 10px 10px 0 #4d9f0c; }
+  .nc-theme .dcf-btn-primary:hover .arrow-one {
+    -webkit-animation: primary-arrow-anim 1s infinite 0.6s;
+            animation: primary-arrow-anim 1s infinite 0.6s; }
+  .nc-theme .dcf-btn-primary:hover .arrow-two {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+    -webkit-animation: primary-arrow-anim 1s infinite 0.4s;
+            animation: primary-arrow-anim 1s infinite 0.4s; }
+  .nc-theme .dcf-btn-primary:hover .arrow-three {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    -webkit-animation: primary-arrow-anim 1s infinite 0.2s;
+            animation: primary-arrow-anim 1s infinite 0.2s; }
 
-.nc-theme .dcf-btn-primary:active,
-.nc-theme .dcf-btn-primary.dcf-active {
+.nc-theme .dcf-btn-primary:active, .nc-theme .dcf-btn-primary.dcf-active {
   background-color: #0b2a36;
   border-color: #0b2a36;
   color: #fff; }
 
-.nc-theme .dcf-btn-secondary,
-.nc-theme .dcf-btn-secondary:link {
+.nc-theme .dcf-btn-secondary, .nc-theme .dcf-btn-secondary:link {
   background-color: #73E3CC;
   color: #144b60;
   -webkit-transition: background-color 400ms ease-out, border-color 400ms ease-out, color 400ms ease-out;
-  transition: background-color 400ms ease-out, border-color 400ms ease-out, color 400ms ease-out; }
-  .nc-theme .dcf-btn-secondary:before,
-  .nc-theme .dcf-btn-secondary:link:before {
-    border-color: #144b60; }
+  transition: background-color 400ms ease-out, border-color 400ms ease-out, color 400ms ease-out;
+  -webkit-box-shadow: 6px 6px 0 #3B3C3C;
+          box-shadow: 6px 6px 0 #3B3C3C; }
 
 .nc-theme .dcf-btn-secondary:focus {
-  -webkit-box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 4px currentColor;
-          box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 4px currentColor; }
+  -webkit-transform: skewX(-15deg) translateY(15%);
+          transform: skewX(-15deg) translateY(15%); }
+  .nc-theme .dcf-btn-secondary:focus .arrow-one {
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.6s;
+            animation: secondary-arrow-anim 1s infinite 0.6s; }
+  .nc-theme .dcf-btn-secondary:focus .arrow-two {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.4s;
+            animation: secondary-arrow-anim 1s infinite 0.4s; }
+  .nc-theme .dcf-btn-secondary:focus .arrow-three {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.2s;
+            animation: secondary-arrow-anim 1s infinite 0.2s; }
 
 .nc-theme .dcf-btn-secondary:visited {
-  color: #0b2a36; }
+  background-color: #546a72;
+  border-color: transparent;
+  color: #fff;
+  -webkit-box-shadow: 6px 6px 0 #85959a;
+          box-shadow: 6px 6px 0 #85959a; }
+  .nc-theme .dcf-btn-secondary:visited:before {
+    border-color: #85959a; }
 
 .nc-theme .dcf-btn-secondary:hover {
   background-color: rgba(11, 42, 54, 0.1);
   border-color: currentColor;
   color: #0b2a36;
   -webkit-transition: background-color 200ms ease-out, border-color 200ms ease-out, color 200ms ease-out;
-  transition: background-color 200ms ease-out, border-color 200ms ease-out, color 200ms ease-out; }
+  transition: background-color 200ms ease-out, border-color 200ms ease-out, color 200ms ease-out;
+  -webkit-box-shadow: 10px 10px 0 #4d9f0c;
+          box-shadow: 10px 10px 0 #4d9f0c; }
+  .nc-theme .dcf-btn-secondary:hover .arrow-one {
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.6s;
+            animation: secondary-arrow-anim 1s infinite 0.6s; }
+  .nc-theme .dcf-btn-secondary:hover .arrow-two {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.4s;
+            animation: secondary-arrow-anim 1s infinite 0.4s; }
+  .nc-theme .dcf-btn-secondary:hover .arrow-three {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.2s;
+            animation: secondary-arrow-anim 1s infinite 0.2s; }
 
-.nc-theme .dcf-btn-secondary:active,
-.nc-theme .dcf-btn-secondary.dcf-active {
+.nc-theme .dcf-btn-secondary:active, .nc-theme .dcf-btn-secondary.dcf-active {
   border-color: currentColor;
-  color: #0b2a36; }
+  background-color: rgba(11, 42, 54, 0.1); }
 
 .nc-theme .dcf-btn-tertiary,
 .nc-theme .dcf-btn-tertiary:link {
@@ -1473,50 +1556,23 @@ button .dcf-icon {
   -webkit-transition: background-color 200ms ease-out, border 200ms ease-out;
   transition: background-color 200ms ease-out, border 200ms ease-out; }
 
-.nc-button-skew {
-  -webkit-box-shadow: 6px 6px 0 #3B3C3C;
-          box-shadow: 6px 6px 0 #3B3C3C;
-  -webkit-transform: skewX(-15deg);
-          transform: skewX(-15deg);
-  margin-right: 1rem;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  /* SVG animations */ }
-  .nc-button-skew span:nth-child(2) {
-    position: relative;
-    padding-left: 0.17798rem;
-    padding-right: 1rem;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    display: inline; }
-  .nc-button-skew:hover {
-    -webkit-box-shadow: 10px 10px 0 #4d9f0c;
-            box-shadow: 10px 10px 0 #4d9f0c; }
-    .nc-button-skew:hover span:nth-child(2) {
-      margin-right: 0.42188rem; }
-    .nc-button-skew:hover .arrow-one {
-      -webkit-animation: color_anim 1s infinite 0.6s;
-              animation: color_anim 1s infinite 0.6s; }
-    .nc-button-skew:hover .arrow-two {
-      -webkit-transform: translateX(5px);
-              transform: translateX(5px);
-      -webkit-animation: color_anim 1s infinite 0.4s;
-              animation: color_anim 1s infinite 0.4s; }
-    .nc-button-skew:hover .arrow-three {
-      -webkit-transform: translateX(10px);
-              transform: translateX(10px);
-      -webkit-animation: color_anim 1s infinite 0.2s;
-              animation: color_anim 1s infinite 0.2s; }
-  .nc-button-skew .icon-arrow {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    right: 0; }
+/* SVG animations */
+@-webkit-keyframes primary-arrow-anim {
+  0% {
+    fill: #fff; }
+  50% {
+    fill: #4d9f0c; }
+  100% {
+    fill: #fff; } }
+@keyframes primary-arrow-anim {
+  0% {
+    fill: #fff; }
+  50% {
+    fill: #4d9f0c; }
+  100% {
+    fill: #fff; } }
 
-@-webkit-keyframes color_anim {
+@-webkit-keyframes secondary-arrow-anim {
   0% {
     fill: #144b60; }
   50% {
@@ -1524,7 +1580,7 @@ button .dcf-icon {
   100% {
     fill: #144b60; } }
 
-@keyframes color_anim {
+@keyframes secondary-arrow-anim {
   0% {
     fill: #144b60; }
   50% {
