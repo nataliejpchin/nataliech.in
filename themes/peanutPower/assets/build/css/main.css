@@ -1348,7 +1348,9 @@ button .dcf-icon {
   padding-right: 1.77778em;
   padding-top: 1em;
   padding-bottom: 1em;
-  position: relative; }
+  position: relative;
+  -webkit-transform: skewX(-15deg);
+          transform: skewX(-15deg); }
   .nc-theme .dcf-btn:before {
     border-width: 2px;
     border-style: solid;
@@ -1471,6 +1473,61 @@ button .dcf-icon {
   -webkit-transition: background-color 200ms ease-out, border 200ms ease-out;
   transition: background-color 200ms ease-out, border 200ms ease-out; }
 
+.nc-button-skew {
+  -webkit-box-shadow: 6px 6px 0 #3B3C3C;
+          box-shadow: 6px 6px 0 #3B3C3C;
+  -webkit-transform: skewX(-15deg);
+          transform: skewX(-15deg);
+  margin-right: 1rem;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  /* SVG animations */ }
+  .nc-button-skew span:nth-child(2) {
+    position: relative;
+    padding-right: 1rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  .nc-button-skew:hover {
+    -webkit-box-shadow: 10px 10px 0 #4d9f0c;
+            box-shadow: 10px 10px 0 #4d9f0c; }
+    .nc-button-skew:hover .arrow-two {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-animation: color_anim 1s infinite 0.4s;
+              animation: color_anim 1s infinite 0.4s; }
+    .nc-button-skew:hover .arrow-one {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-animation: color_anim 1s infinite 0.6s;
+              animation: color_anim 1s infinite 0.6s; }
+    .nc-button-skew:hover .arrow-three {
+      -webkit-animation: color_anim 1s infinite 0.2s;
+              animation: color_anim 1s infinite 0.2s; }
+  .nc-button-skew .icon-arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    width: 66px; }
+
+@-webkit-keyframes color_anim {
+  0% {
+    fill: white; }
+  50% {
+    fill: #FBC638; }
+  100% {
+    fill: white; } }
+
+@keyframes color_anim {
+  0% {
+    fill: white; }
+  50% {
+    fill: #FBC638; }
+  100% {
+    fill: white; } }
+
 .nc-card {
   -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
@@ -1557,6 +1614,24 @@ button .dcf-icon {
       width: 4%;
       position: relative;
       left: -0.7em; } }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+.icon-arrow {
+  width: 1rem; }
 
 .nc-portfolio {
   overflow: hidden;
@@ -1687,6 +1762,8 @@ button .dcf-icon {
     z-index: -1;
     fill: #73E3CC;
     fill-opacity: 0.89; }
+    .nc-portfolio-curvy--single {
+      height: 131%; }
 
 .typing > * {
   overflow: hidden;
