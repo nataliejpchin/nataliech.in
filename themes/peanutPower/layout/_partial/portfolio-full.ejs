@@ -1,10 +1,18 @@
-<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="arrow" viewBox="0 0 49 32">
-<title>arrow</title>
-<path d="M29.882 2.898l2.844-2.795c0.145-0.142 0.377-0.142 0.522-0l15.639 15.364c0.293 0.288 0.297 0.759 0.009 1.052-0.003 0.003-0.006 0.006-0.009 0.009l-15.639 15.367c-0.145 0.142-0.377 0.142-0.522 0l-2.844-2.794c-0.147-0.144-0.149-0.38-0.005-0.526 0.002-0.002 0.003-0.003 0.005-0.005l12.531-12.306c0.147-0.144 0.149-0.38 0.005-0.526-0.002-0.002-0.003-0.003-0.005-0.005l-12.532-12.305c-0.147-0.144-0.149-0.38-0.005-0.526 0.002-0.002 0.003-0.003 0.005-0.005z"></path>
-</symbol>
-</defs>
+<svg aria-hidden="true" style="width: 0; height:0; visibility:hidden;">
+  <defs>
+    <symbol id="arrow" viewBox="0 0 19.3 33" preserveAspectRatio="xMinYMax meet">
+    <title>arrow</title>
+    <path d="M0.1,2.9L3,0.1C3.1,0,3.3,0,3.5,0.1l15.6,15.4c0.3,0.3,0.3,0.8,0,1.1c0,0,0,0,0,0L3.5,31.9C3.3,32,3.1,32,3,31.9l-2.8-2.8
+      C0,29,0,28.7,0.1,28.6c0,0,0,0,0,0l12.5-12.3c0.1-0.1,0.1-0.4,0-0.5c0,0,0,0,0,0L0.1,3.4C0,3.3,0,3.1,0.1,2.9
+      C0.1,2.9,0.1,2.9,0.1,2.9L0.1,2.9z"></path>
+    </symbol>
+  </defs>
+  <defs>
+    <symbol id="arrow-right" viewBox="0 0 72 32">
+    <title>right arrow</title>
+    <path d="M72.393 16l-16-16-14.426 14.426h-41.967v2.623h41.443l14.951 14.951z"></path>
+    </symbol>
+  </defs>
 </svg>
 
 <article class="dcf-wrapper nc-portfolio">
@@ -22,22 +30,25 @@
       <%- item.brief_description %>
       <div class="dcf-pb-6 dcf-pt-1">
         <% if(item.website_link) { %>
-          <a class="dcf-btn dcf-btn-primary nc-button-skew" href="<%- item.website_link %>">
+          <a class="dcf-btn dcf-btn-primary" href="<%- item.website_link %>">
             <span>Visit website</span>
-            <span>
-              <svg class="icon icon-arrow"><use xlink:href="#arrow"></use></svg>
+            <span class="icon-arrow-wrapper">
+              <svg class="icon icon-arrow">
+                <use xlink:href="#arrow" class="arrow-one"></use>
+                <use xlink:href="#arrow" class="arrow-two"></use>
+                <use xlink:href="#arrow" class="arrow-three"></use>       
+              </svg>
             </span>
           </a>
         <% } %>
         <% if(item.repo_link) { %>
-          <a class="dcf-btn dcf-btn-secondary nc-button-skew" href="<%- item.repo_link %>">
+          <a class="dcf-btn dcf-btn-secondary" href="<%- item.repo_link %>">
             <span>View repo</span>
-            <span>
+            <span class="icon-arrow-wrapper">
               <svg class="icon icon-arrow">
-                <use xlink:href="#arrow" class="arrow-one" transform="translate(00)"></use>
-                <use xlink:href="#arrow" class="arrow-two" transform="translate(5)"></use>
-                <use xlink:href="#arrow" class="arrow-three" transform="translate(10)"></use>
-        
+                <use xlink:href="#arrow" class="arrow-one"></use>
+                <use xlink:href="#arrow" class="arrow-two"></use>
+                <use xlink:href="#arrow" class="arrow-three"></use>       
               </svg>
             </span>
           </a>
@@ -103,6 +114,11 @@ L1.1-0.1z"/>
       </section>
     <% } %>
   <% } %>
-
+  <div>
+    <a href="<%- config.root %>" class="nc-btnlink nc-btnlink-back">
+      <div class="nc-btnlink-text">Portfolio List</div>
+      <svg class="icon icon-next"><use xlink:href="#arrow-right"></use></svg>
+    </a>
+  </div>
 </article>
 
