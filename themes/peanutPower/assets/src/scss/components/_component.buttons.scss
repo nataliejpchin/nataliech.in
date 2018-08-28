@@ -18,6 +18,7 @@
         @include pb-4;
         // text-transform: uppercase;
         position: relative;
+        transform: skewX(-15deg);
 
         &:before {
             border-width: 2px;
@@ -159,5 +160,62 @@
     .dcf-btn-secondary-inverse:hover {
         background-color: rgba(0, 0, 0, .2);
         transition: background-color $hover-on, border $hover-on;
+    }
+}
+
+.nc-button-skew {
+    box-shadow: 6px 6px 0 $black;
+    transform: skewX(-15deg);
+    margin-right: #{ms(0)}rem;
+    transition: all 1s ease-in-out;
+    
+    span {
+        // transform: skewX(15deg);
+
+        &:nth-child(2) {
+            position: relative;
+            padding-right: #{ms(0)}rem;
+            transition: 0.5s;
+        }
+    }
+    
+    &:hover {
+        box-shadow: 10px 10px 0 #4d9f0c;
+        .arrow-two {
+            transform: translateX(0%);
+            animation: color_anim 1s infinite 0.4s;
+        }
+        .arrow-one {
+            transform: translateX(0%);
+            animation: color_anim 1s infinite 0.6s;
+        }
+        .arrow-three {
+            animation: color_anim 1s infinite 0.2s;
+        }
+    
+    
+    }
+
+    .icon-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.5s;
+        width: 66px;
+        
+    }
+
+
+    /* SVG animations */
+    @keyframes color_anim {
+        0% {
+            fill: white;
+        }
+        50% {
+            fill: #FBC638;
+        }
+        100% {
+            fill: white;
+        }
     }
 }

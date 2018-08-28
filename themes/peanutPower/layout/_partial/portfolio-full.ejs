@@ -1,3 +1,12 @@
+<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="arrow" viewBox="0 0 49 32">
+<title>arrow</title>
+<path d="M29.882 2.898l2.844-2.795c0.145-0.142 0.377-0.142 0.522-0l15.639 15.364c0.293 0.288 0.297 0.759 0.009 1.052-0.003 0.003-0.006 0.006-0.009 0.009l-15.639 15.367c-0.145 0.142-0.377 0.142-0.522 0l-2.844-2.794c-0.147-0.144-0.149-0.38-0.005-0.526 0.002-0.002 0.003-0.003 0.005-0.005l12.531-12.306c0.147-0.144 0.149-0.38 0.005-0.526-0.002-0.002-0.003-0.003-0.005-0.005l-12.532-12.305c-0.147-0.144-0.149-0.38-0.005-0.526 0.002-0.002 0.003-0.003 0.005-0.005z"></path>
+</symbol>
+</defs>
+</svg>
+
 <article class="dcf-wrapper nc-portfolio">
   <header class="dcf-measure dcf-pb-6">
     <h1 class="dcf-mb-0"><%- item.title || theme.default_post_title || "Untitled" %></h1>
@@ -13,10 +22,25 @@
       <%- item.brief_description %>
       <div class="dcf-pb-6 dcf-pt-1">
         <% if(item.website_link) { %>
-          <a class="dcf-btn dcf-btn-primary" href="<%- item.website_link %>">Visit website</a>
+          <a class="dcf-btn dcf-btn-primary nc-button-skew" href="<%- item.website_link %>">
+            <span>Visit website</span>
+            <span>
+              <svg class="icon icon-arrow"><use xlink:href="#arrow"></use></svg>
+            </span>
+          </a>
         <% } %>
         <% if(item.repo_link) { %>
-          <a class="dcf-btn dcf-btn-secondary" href="<%- item.repo_link %>">View repo</a>
+          <a class="dcf-btn dcf-btn-secondary nc-button-skew" href="<%- item.repo_link %>">
+            <span>View repo</span>
+            <span>
+              <svg class="icon icon-arrow">
+                <use xlink:href="#arrow" class="arrow-one" transform="translate(00)"></use>
+                <use xlink:href="#arrow" class="arrow-two" transform="translate(5)"></use>
+                <use xlink:href="#arrow" class="arrow-three" transform="translate(10)"></use>
+        
+              </svg>
+            </span>
+          </a>
         <% } %>
       </div>
     </section>
