@@ -1486,18 +1486,15 @@ button .dcf-icon {
     position: relative;
     padding-right: 1rem;
     -webkit-transition: 0.5s;
-    transition: 0.5s; }
+    transition: 0.5s;
+    display: inline; }
   .nc-button-skew:hover {
     -webkit-box-shadow: 10px 10px 0 #4d9f0c;
             box-shadow: 10px 10px 0 #4d9f0c; }
     .nc-button-skew:hover .arrow-two {
-      -webkit-transform: translateX(0%);
-              transform: translateX(0%);
       -webkit-animation: color_anim 1s infinite 0.4s;
               animation: color_anim 1s infinite 0.4s; }
     .nc-button-skew:hover .arrow-one {
-      -webkit-transform: translateX(0%);
-              transform: translateX(0%);
       -webkit-animation: color_anim 1s infinite 0.6s;
               animation: color_anim 1s infinite 0.6s; }
     .nc-button-skew:hover .arrow-three {
@@ -1510,23 +1507,23 @@ button .dcf-icon {
             transform: translateY(-50%);
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    width: 66px; }
+    right: 0; }
 
 @-webkit-keyframes color_anim {
   0% {
-    fill: white; }
+    fill: #144b60; }
   50% {
-    fill: #FBC638; }
+    fill: #4d9f0c; }
   100% {
-    fill: white; } }
+    fill: #144b60; } }
 
 @keyframes color_anim {
   0% {
-    fill: white; }
+    fill: #144b60; }
   50% {
-    fill: #FBC638; }
+    fill: #4d9f0c; }
   100% {
-    fill: white; } }
+    fill: #144b60; } }
 
 .nc-card {
   -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);

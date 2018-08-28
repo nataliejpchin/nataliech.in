@@ -176,17 +176,18 @@
             position: relative;
             padding-right: #{ms(0)}rem;
             transition: 0.5s;
+            display: inline;
         }
     }
     
     &:hover {
         box-shadow: 10px 10px 0 #4d9f0c;
         .arrow-two {
-            transform: translateX(0%);
+            // transform: translateX(0%);
             animation: color_anim 1s infinite 0.4s;
         }
         .arrow-one {
-            transform: translateX(0%);
+            // transform: translateX(0%);
             animation: color_anim 1s infinite 0.6s;
         }
         .arrow-three {
@@ -201,7 +202,8 @@
         top: 50%;
         transform: translateY(-50%);
         transition: 0.5s;
-        width: 66px;
+        // width: 66px;
+        right:0;
         
     }
 
@@ -209,13 +211,13 @@
     /* SVG animations */
     @keyframes color_anim {
         0% {
-            fill: white;
+            fill: $dark-teal;
         }
         50% {
-            fill: #FBC638;
+            fill:#4d9f0c;
         }
         100% {
-            fill: white;
+            fill: $dark-teal;
         }
     }
 }
