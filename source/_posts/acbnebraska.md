@@ -9,7 +9,7 @@ project_type: "Website Redesign"
 client_location: American Council of the Blind Nebraska
 brief_description: "<p>This project was part of a global web accessibility competition - OpenAIR: the Accessibility Internet Rally 2018 organized by Knowbility to be completed in 5 weeks. As part of a team of 3 web developers, we competed against 13 teams in the Professional Developer category. In this competition, OpenAIR partnered teams with nonprofits to create accessible websites for these organizations that will serve all populations equally, including persons with disabilities. We were judged mainly on web accessibility criterias such as:</p><ul><li>Core Accessibility (use of alt text for images, semantic markup,  color contrast, ARIA landmark roles, etc.,)</li><li>Basic Accessibility, Usability and Rally Requirements  (spelling, form controls, site map, search, etc.,)
 </li><li>Overall Site Quality (visual aesthetics, site appropriateness, etc.)</li><li>Advanced Accessibility (data tables, audio transcripts, responsive design, etc.,)</li><li>Nonprofit Organization Satisfaction</li></ul>"
-website_link: "acbnebraska.org"
+website_link: "https://acbnebraska.org/"
 repo_link: "https://gitlab.com/nchin/acbnebraska-theme"
 role: "Theming, Information Architecture, User Experience"
 tech: "<li>Drupal 8</li><li>Design system</li><li>Twig</li><li>Gulp</li><li>SCSS</li><li>HTML</li><li>BEM and ITCSS methodology</li><li>JavaScript</li><li>Adobe XD</li>"
