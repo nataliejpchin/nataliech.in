@@ -1336,6 +1336,66 @@ button .dcf-icon {
 .dcf-table td:not(:last-child) {
   padding-right: 1.33333rem; }
 
+.nc-btnlink {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Assistant", Verdana, serif;
+  font-size: 0.75em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  position: relative;
+  margin-top: 2.37037rem;
+  margin-left: 2.37037rem; }
+  .nc-btnlink-back {
+    float: left;
+    padding-right: 1.5rem; }
+    .nc-btnlink-back:before {
+      content: "";
+      position: absolute;
+      width: 2.37037rem;
+      height: 2.37037rem;
+      background-color: #73E3CC;
+      z-index: -1;
+      left: -1.5rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .nc-btnlink-text {
+    margin-right: 0.42188rem;
+    position: relative;
+    overflow: hidden; }
+    .nc-btnlink-text:before {
+      content: '';
+      position: absolute;
+      -webkit-transition: -webkit-transform .5s ease;
+      transition: -webkit-transform .5s ease;
+      transition: transform .5s ease;
+      transition: transform .5s ease, -webkit-transform .5s ease;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: #144b60;
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%); }
+  .nc-btnlink:visited {
+    color: #205468; }
+  .nc-btnlink:hover .nc-btnlink-text, .nc-btnlink:active .nc-btnlink-text {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+    .nc-btnlink:hover .nc-btnlink-text:before, .nc-btnlink:active .nc-btnlink-text:before {
+      -webkit-transform: translateX(0);
+              transform: translateX(0); }
+  .nc-btnlink .icon-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    fill: #73E3CC; }
+
 .nc-theme .dcf-btn {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1693,6 +1753,9 @@ Single-colored icons can be modified like so:
 .icon-arrow {
   width: 1rem; }
 
+.icon-next {
+  width: 1.5rem; }
+
 .nc-portfolio {
   overflow: hidden;
   padding-bottom: 2.37037rem; }
@@ -1753,7 +1816,9 @@ Single-colored icons can be modified like so:
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center; }
     .nc-portfolio-screenshots figure {
       padding: 1rem;
       -webkit-box-flex: 1;
