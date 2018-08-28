@@ -74,7 +74,8 @@
       <% } %>
     </section>
     <section class="dcf-stretch nc-portfolio-screenshots-wrapper">
-      <svg class="nc-portfolio-curvy dcf-stretch<% if(!item.right_screenshot){ %> nc-portfolio-curvy--single<% } %>"
+      <svg class="nc-portfolio-curvy dcf-stretch<% if(!item.right_screenshot || item.short_screenshot){ %>
+      nc-portfolio-curvy--single<% } %>"
            viewBox="0 0 1 1"
            preserveAspectRatio="none">
           <path d="M1.1-0.1C1.1,0.1,0.8,0.4,0.6,0.2C0.4,0.1,0.2,0.1,0,0.3v0.2l-0.1,0.4C0,0.7,0.3,0.6,0.5,0.7c0.2,0.1,0.6,0.1,0.5,0V0.5
