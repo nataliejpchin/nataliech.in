@@ -1,8 +1,11 @@
 h1 {
-    background: $dark-teal;
-    background: linear-gradient(90deg, $dark-teal 0%, #4d9f0c 90%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $dark-teal;
+    
+    @supports (-webkit-text-fill-color: transparent) {
+        background: linear-gradient(90deg, $dark-teal 0%, #4d9f0c 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 h2, 

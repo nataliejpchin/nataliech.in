@@ -113,17 +113,17 @@
             box-shadow: 10px 10px 0 #4d9f0c;
 
             .arrow-one {
-                animation: primary-arrow-anim 1s infinite 0.6s;
+                animation: primary-arrow-anim 1s infinite 0.3s;
             }
-    
+
             .arrow-two {
                 transform: translateX(5px);
-                animation: primary-arrow-anim 1s infinite 0.4s;
+                animation: primary-arrow-anim 1s infinite 0.5s linear;
             }
-    
+
             .arrow-three {
                 transform: translateX(10px);
-                animation: primary-arrow-anim 1s infinite 0.2s;
+                animation: primary-arrow-anim 1s infinite 0.9s;
             }
         }
     
@@ -150,17 +150,17 @@
             transform: skewX(-15deg) translateY(15%);
 
             .arrow-one {
-                animation: secondary-arrow-anim 1s infinite 0.6s;
+                animation: secondary-arrow-anim 1s infinite 0.3s;
             }
 
             .arrow-two {
                 transform: translateX(5px);
-                animation: secondary-arrow-anim 1s infinite 0.4s;
+                animation: secondary-arrow-anim 1s infinite 0.5s linear;
             }
 
             .arrow-three {
                 transform: translateX(10px);
-                animation: secondary-arrow-anim 1s infinite 0.2s;
+                animation: secondary-arrow-anim 1s infinite 0.9s;
             }
         }
 
@@ -182,17 +182,17 @@
             transition: background-color $hover-on, border-color $hover-on, color $hover-on;
             box-shadow: 10px 10px 0 #4d9f0c;
             .arrow-one {
-                animation: secondary-arrow-anim 1s infinite 0.6s;
+                animation: secondary-arrow-anim 1s infinite 0.3s;
             }
 
             .arrow-two {
                 transform: translateX(5px);
-                animation: secondary-arrow-anim 1s infinite 0.4s;
+                animation: secondary-arrow-anim 1s infinite 0.5s linear;
             }
 
             .arrow-three {
                 transform: translateX(10px);
-                animation: secondary-arrow-anim 1s infinite 0.2s;
+                animation: secondary-arrow-anim 1s infinite 0.9s;
             }
         }
 
@@ -260,25 +260,6 @@
         transition: background-color $hover-on, border $hover-on;
     }
 }
-
-// .nc-button-skew {
-   
-//     &:hover {
-//         box-shadow: 10px 10px 0 #4d9f0c;
-
-//         .arrow-one {
-//             animation: primary-arrow-anim 1s infinite 0.6s;
-//         }
-//         .arrow-two {
-//             transform: translateX(5px);
-//             animation: primary-arrow-anim 1s infinite 0.4s;
-//         }
-//         .arrow-three {
-//             transform: translateX(10px);
-//             animation: primary-arrow-anim 1s infinite 0.2s;
-//         }    
-//     }
-// }
 
 /* SVG animations */
 @keyframes primary-arrow-anim {
