@@ -1855,16 +1855,17 @@ Single-colored icons can be modified like so:
           background: -webkit-linear-gradient(top, #67e2c9 0%, rgba(255, 255, 255, 0) 78%);
           background: linear-gradient(to bottom, #67e2c9 0%, rgba(255, 255, 255, 0) 78%); } }
   .nc-portfolio-teaser-wrapper {
-    display: grid;
-    grid-column-gap: 1.77778em;
-    grid-row-gap: 1.77778em;
-    grid-template-columns: repeat(3, 1fr); }
-    @media only screen and (max-width: 74.55em) {
-      .nc-portfolio-teaser-wrapper {
-        grid-template-columns: repeat(2, 1fr); } }
-    @media only screen and (max-width: 41.95625em) {
-      .nc-portfolio-teaser-wrapper {
-        grid-template-columns: 1fr; } }
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1em 0 1em -0.5em;
+    justify-content: space-around; }
+  @media only screen and (min-width: 55.925em) {
+    .nc-portfolio-teaser {
+      max-width: 49%; } }
+  @media only screen and (min-width: 74.55em) {
+    .nc-portfolio-teaser {
+      max-width: 32%; } }
   .nc-portfolio-teaser a {
     text-decoration: none; }
   .nc-portfolio-cover-img {
