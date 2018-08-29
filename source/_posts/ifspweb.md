@@ -5,6 +5,7 @@ tags:
 cover_image: "ifspweb-cover.jpg"
 left_screenshot: "ifspweb-before.png"
 right_screenshot: "ifspweb-after.png"
+short_screenshot: true
 project_type: Website redesign
 client:
 brief_description: "The IFSP website provides self-paced tutorial on Individualized Family Service Plan aimed at social professionals and families around Nebraska. This was my first project of completely redesigning a website from ground up. The preexisting site was Flash-based and had to be converted into HTML as major evergreen browsers were dropping their Flash support at the time."

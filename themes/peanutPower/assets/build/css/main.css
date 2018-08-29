@@ -1060,6 +1060,9 @@ a.dcf-calendar-date-active:focus {
   color: #787979;
   font-size: 0.75em; }
 
+.dcf-label {
+  flex-shrink: 0; }
+
 .dcf-input-text {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1204,25 +1207,32 @@ button .dcf-icon {
     grid-template-columns: 1fr 1fr;
     grid-gap: 3.16049em 5vw; } }
 
+.dcf-input-group-form {
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap; }
+
 .dcf-input-group {
   display: -webkit-box;
   display: flex;
-  width: 100%; }
+  -webkit-box-flex: 1;
+          flex: 1 1 50%; }
 
 .dcf-input-group .dcf-input-text {
   -webkit-box-flex: 1;
-          flex-grow: 1;
-  margin-bottom: 0;
-  margin-top: 0;
-  width: 1%; }
+          flex: 1 1 auto; }
+
+.dcf-input-group,
+.dcf-input-group .dcf-input-text {
+  min-width: 0; }
 
 .dcf-input-group .dcf-btn {
   -webkit-box-align: center;
           align-items: center;
   display: -webkit-box;
-  display: flex;
-  margin-bottom: 0;
-  margin-top: 0; }
+  display: flex; }
 
 .dcf-input-group-addon {
   -webkit-box-align: center;
@@ -1456,18 +1466,18 @@ button .dcf-icon {
   -webkit-transform: skewX(-15deg) translateY(15%);
           transform: skewX(-15deg) translateY(15%); }
   .nc-theme .dcf-btn-primary:focus .arrow-one {
-    -webkit-animation: primary-arrow-anim 1s infinite 0.6s;
-            animation: primary-arrow-anim 1s infinite 0.6s; }
+    -webkit-animation: primary-arrow-anim 1s infinite 0.3s;
+            animation: primary-arrow-anim 1s infinite 0.3s; }
   .nc-theme .dcf-btn-primary:focus .arrow-two {
     -webkit-transform: translateX(5px);
             transform: translateX(5px);
-    -webkit-animation: primary-arrow-anim 1s infinite 0.4s;
-            animation: primary-arrow-anim 1s infinite 0.4s; }
+    -webkit-animation: primary-arrow-anim 1s infinite 0.5s linear;
+            animation: primary-arrow-anim 1s infinite 0.5s linear; }
   .nc-theme .dcf-btn-primary:focus .arrow-three {
     -webkit-transform: translateX(10px);
             transform: translateX(10px);
-    -webkit-animation: primary-arrow-anim 1s infinite 0.2s;
-            animation: primary-arrow-anim 1s infinite 0.2s; }
+    -webkit-animation: primary-arrow-anim 1s infinite 0.9s;
+            animation: primary-arrow-anim 1s infinite 0.9s; }
 
 .nc-theme .dcf-btn-primary:visited {
   background-color: #546a72;
