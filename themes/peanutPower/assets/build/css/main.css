@@ -1060,9 +1060,6 @@ a.dcf-calendar-date-active:focus {
   color: #787979;
   font-size: 0.75em; }
 
-.dcf-label {
-  flex-shrink: 0; }
-
 .dcf-input-text {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1207,32 +1204,25 @@ button .dcf-icon {
     grid-template-columns: 1fr 1fr;
     grid-gap: 3.16049em 5vw; } }
 
-.dcf-input-group-form {
-  -webkit-box-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap; }
-
 .dcf-input-group {
   display: -webkit-box;
   display: flex;
-  -webkit-box-flex: 1;
-          flex: 1 1 50%; }
+  width: 100%; }
 
 .dcf-input-group .dcf-input-text {
   -webkit-box-flex: 1;
-          flex: 1 1 auto; }
-
-.dcf-input-group,
-.dcf-input-group .dcf-input-text {
-  min-width: 0; }
+          flex-grow: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 1%; }
 
 .dcf-input-group .dcf-btn {
   -webkit-box-align: center;
           align-items: center;
   display: -webkit-box;
-  display: flex; }
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 0; }
 
 .dcf-input-group-addon {
   -webkit-box-align: center;
@@ -1497,18 +1487,18 @@ button .dcf-icon {
   -webkit-box-shadow: 10px 10px 0 #4d9f0c;
           box-shadow: 10px 10px 0 #4d9f0c; }
   .nc-theme .dcf-btn-primary:hover .arrow-one {
-    -webkit-animation: primary-arrow-anim 1s infinite 0.6s;
-            animation: primary-arrow-anim 1s infinite 0.6s; }
+    -webkit-animation: primary-arrow-anim 1s infinite 0.3s;
+            animation: primary-arrow-anim 1s infinite 0.3s; }
   .nc-theme .dcf-btn-primary:hover .arrow-two {
     -webkit-transform: translateX(5px);
             transform: translateX(5px);
-    -webkit-animation: primary-arrow-anim 1s infinite 0.4s;
-            animation: primary-arrow-anim 1s infinite 0.4s; }
+    -webkit-animation: primary-arrow-anim 1s infinite 0.5s linear;
+            animation: primary-arrow-anim 1s infinite 0.5s linear; }
   .nc-theme .dcf-btn-primary:hover .arrow-three {
     -webkit-transform: translateX(10px);
             transform: translateX(10px);
-    -webkit-animation: primary-arrow-anim 1s infinite 0.2s;
-            animation: primary-arrow-anim 1s infinite 0.2s; }
+    -webkit-animation: primary-arrow-anim 1s infinite 0.9s;
+            animation: primary-arrow-anim 1s infinite 0.9s; }
 
 .nc-theme .dcf-btn-primary:active, .nc-theme .dcf-btn-primary.dcf-active {
   background-color: #0b2a36;
@@ -1527,18 +1517,18 @@ button .dcf-icon {
   -webkit-transform: skewX(-15deg) translateY(15%);
           transform: skewX(-15deg) translateY(15%); }
   .nc-theme .dcf-btn-secondary:focus .arrow-one {
-    -webkit-animation: secondary-arrow-anim 1s infinite 0.6s;
-            animation: secondary-arrow-anim 1s infinite 0.6s; }
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.3s;
+            animation: secondary-arrow-anim 1s infinite 0.3s; }
   .nc-theme .dcf-btn-secondary:focus .arrow-two {
     -webkit-transform: translateX(5px);
             transform: translateX(5px);
-    -webkit-animation: secondary-arrow-anim 1s infinite 0.4s;
-            animation: secondary-arrow-anim 1s infinite 0.4s; }
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.5s linear;
+            animation: secondary-arrow-anim 1s infinite 0.5s linear; }
   .nc-theme .dcf-btn-secondary:focus .arrow-three {
     -webkit-transform: translateX(10px);
             transform: translateX(10px);
-    -webkit-animation: secondary-arrow-anim 1s infinite 0.2s;
-            animation: secondary-arrow-anim 1s infinite 0.2s; }
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.9s;
+            animation: secondary-arrow-anim 1s infinite 0.9s; }
 
 .nc-theme .dcf-btn-secondary:visited {
   background-color: #546a72;
@@ -1558,18 +1548,18 @@ button .dcf-icon {
   -webkit-box-shadow: 10px 10px 0 #4d9f0c;
           box-shadow: 10px 10px 0 #4d9f0c; }
   .nc-theme .dcf-btn-secondary:hover .arrow-one {
-    -webkit-animation: secondary-arrow-anim 1s infinite 0.6s;
-            animation: secondary-arrow-anim 1s infinite 0.6s; }
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.3s;
+            animation: secondary-arrow-anim 1s infinite 0.3s; }
   .nc-theme .dcf-btn-secondary:hover .arrow-two {
     -webkit-transform: translateX(5px);
             transform: translateX(5px);
-    -webkit-animation: secondary-arrow-anim 1s infinite 0.4s;
-            animation: secondary-arrow-anim 1s infinite 0.4s; }
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.5s linear;
+            animation: secondary-arrow-anim 1s infinite 0.5s linear; }
   .nc-theme .dcf-btn-secondary:hover .arrow-three {
     -webkit-transform: translateX(10px);
             transform: translateX(10px);
-    -webkit-animation: secondary-arrow-anim 1s infinite 0.2s;
-            animation: secondary-arrow-anim 1s infinite 0.2s; }
+    -webkit-animation: secondary-arrow-anim 1s infinite 0.9s;
+            animation: secondary-arrow-anim 1s infinite 0.9s; }
 
 .nc-theme .dcf-btn-secondary:active, .nc-theme .dcf-btn-secondary.dcf-active {
   border-color: currentColor;
