@@ -25,7 +25,7 @@ only were Michael, Richard and Natalie knowledgeable about what it was they were
  idea to include. Supporting documentation was also provided to further justify their thought process in why some 
  modifications were not a good idea. Because of the professionalism and web development skills, our website went from
   looking like it was designed by someone in grade school with limited .html experience to looking more professional
-  and more up to date. As was communicated by one of our visitors \" After reviewing the site, I’m writing to say I’m
+  and more up to date. As was communicated by one of our visitors. \"After reviewing the site, I’m writing to say I’m
    pleased with its layout and design. Heading structures are logical and sequential, search results are properly 
    identified and the page titles are unique and orienting. As a screen reader user I’m unable to comment on visual 
    aspects of the site, but please pass on my positive feedback to the web team…well done.\""
