@@ -2,9 +2,9 @@
 title: IFSPweb
 date: 2018-08-26 09:07:06
 tags:
-cover_image: "ifspweb-cover.jpg"
-left_screenshot: "ifspweb-before.png"
-right_screenshot: "ifspweb-after.png"
+cover_image: "ifspweb-cover-min.jpg"
+left_screenshot: "ifspweb-before-min.png"
+right_screenshot: "ifspweb-after-min.png"
 short_screenshot: true
 project_type: Website redesign
 client:

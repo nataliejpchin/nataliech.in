@@ -7,6 +7,7 @@ date: {{ date }}
 ? left_alt_tag
 ? right_screenshot
 ? right_alt_tag
+short_screenshot: false
 ? project_type
 ? client
 ? brief_description

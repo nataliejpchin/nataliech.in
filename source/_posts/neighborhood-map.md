@@ -2,8 +2,8 @@
 title: Hawaii neighborhood map
 date: 2018-08-26 09:23:54
 tags:
-cover_image: "neighborhood-map-cover.jpg"
-left_screenshot: "neighborhood-map.png"
+cover_image: "neighborhood-map-cover-min.jpg"
+left_screenshot: "neighborhood-map-min.png"
 left_alt_tag: "Screenshot of neighborhood map"
 project_type: Single-page responsive web app
 client:

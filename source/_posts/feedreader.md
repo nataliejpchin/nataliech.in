@@ -2,8 +2,8 @@
 title: Feedreader Jasmine Test
 date: 2018-08-26 09:28:34
 tags:
-cover_image: "feedreader-cover.jpg"
-left_screenshot: "feedreader.png"
+cover_image: "feedreader-cover-min.jpg"
+left_screenshot: "feedreader-min.png"
 left_alt_tag: "Screenshot of feedreader"
 project_type: Test-driven development
 client:

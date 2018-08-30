@@ -2,10 +2,10 @@
 title: QIC-WD
 date: 2018-08-26 09:44:27
 tags:
-cover_image: "qicwd-cover.jpg"
-left_screenshot: "qicwd-simple.png"
+cover_image: "qicwd-cover-min.jpg"
+left_screenshot: "qicwd-simple-min.png"
 left_alt_tag: "Screenshot of simple static website"
-right_screenshot: "qicwd-drupal.png"
+right_screenshot: "qicwd-drupal-min.png"
 right_alt_tag: "Screenshot of drupal website"
 project_type: Website Design and Development
 client:
