@@ -1860,14 +1860,31 @@ Single-colored icons can be modified like so:
     flex-wrap: wrap;
     margin: -1em 0 1em -0.5em;
     justify-content: space-around; }
-  @media only screen and (min-width: 55.925em) {
-    .nc-portfolio-teaser {
-      max-width: 49%; } }
-  @media only screen and (min-width: 74.55em) {
-    .nc-portfolio-teaser {
-      max-width: 32%; } }
-  .nc-portfolio-teaser a {
-    text-decoration: none; }
+    @supports (display: grid) {
+      .nc-portfolio-teaser-wrapper {
+        display: grid;
+        grid-column-gap: 1.77778em;
+        grid-row-gap: 1.77778em;
+        grid-template-columns: repeat(3, 1fr); }
+        @media only screen and (max-width: 74.55em) {
+          .nc-portfolio-teaser-wrapper {
+            grid-template-columns: repeat(2, 1fr); } }
+        @media only screen and (max-width: 41.95625em) {
+          .nc-portfolio-teaser-wrapper {
+            grid-template-columns: 1fr; } } }
+  .nc-portfolio-teaser {
+    display: inline-block; }
+    @media only screen and (min-width: 55.925em) {
+      .nc-portfolio-teaser {
+        max-width: 49%; } }
+    @media only screen and (min-width: 74.55em) {
+      .nc-portfolio-teaser {
+        max-width: 32%; } }
+    @supports (display: grid) {
+      .nc-portfolio-teaser {
+        max-width: 100%; } }
+    .nc-portfolio-teaser a {
+      text-decoration: none; }
   .nc-portfolio-cover-img {
     max-height: 15em; }
   .nc-portfolio-tech-inline {
@@ -1949,9 +1966,10 @@ Single-colored icons can be modified like so:
     height: 0.5em; } }
 
 .nc-theme .dcf-badge {
-  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(#e2ebf0));
-  background-image: -webkit-linear-gradient(left, transparent 0%, #e2ebf0 100%);
-  background-image: linear-gradient(to right, transparent 0%, #e2ebf0 100%);
+  background: #f1f1f1;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#e2ebf0));
+  background-image: -webkit-linear-gradient(left, #fff 0%, #e2ebf0 100%);
+  background-image: linear-gradient(to right, #fff 0%, #e2ebf0 100%);
   color: #144b60; }
 
 .fonts-loaded body {

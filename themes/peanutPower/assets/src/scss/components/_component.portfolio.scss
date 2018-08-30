@@ -146,27 +146,32 @@
         margin: -1em 0 1em -0.5em;
         justify-content: space-around; 
 
-        // @supports (display:grid) {
-        //     display: grid;
-        //     @include col-gap-md;
-        //     @include row-gap-md;
-        //     grid-template-columns: repeat(3, 1fr);
-        //     @include mq(lg, max, width) {
-        //         grid-template-columns: repeat(2, 1fr);
-        //     }
-        //     @include mq(sm, max, width) {
-        //         grid-template-columns: 1fr;
-        //     }
-        // }
+        @supports (display:grid) {
+            display: grid;
+            @include col-gap-md;
+            @include row-gap-md;
+            grid-template-columns: repeat(3, 1fr);
+            @include mq(lg, max, width) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include mq(sm, max, width) {
+                grid-template-columns: 1fr;
+            }
+        }
     }
 
     &-teaser {
-
+        display: inline-block;
+        
         @include mq(md, min, width) {
             max-width: 49%;
         }
         @include mq(lg, min, width) {
             max-width: 32%;
+        }
+
+        @supports (display:grid) {
+            max-width: 100%;
         }
 
         a {

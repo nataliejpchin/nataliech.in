@@ -6,7 +6,8 @@
 
     // !Default Badges
     .dcf-badge {
-        background-image: linear-gradient(to right, transparent 0%, #e2ebf0 100%);
+        background: $ui-100;
+        background-image: linear-gradient(to right, $white 0%, #e2ebf0 100%);
         color: $dark-teal;
     }
     
