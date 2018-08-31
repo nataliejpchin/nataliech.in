@@ -2,8 +2,8 @@
 title: Classic Arcade Game Clone
 date: 2018-08-26 09:21:12
 tags:
-cover_image: "arcade-game-cover.jpg"
-left_screenshot: "arcade-game.png"
+cover_image: "arcade-game-cover-min.jpg"
+left_screenshot: "arcade-game-min.png"
 left_alt_tag: "Screenshot of game"
 project_type: Arcade game
 client:

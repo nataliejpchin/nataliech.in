@@ -2,11 +2,11 @@
 title: NDE Transition
 date: 2018-08-26 09:31:58
 tags:
-cover_image: "ndetransition-cover.jpg"
-left_screenshot: "ndetransition-before.png"
-right_screenshot: "ndetransition-after.png"
+cover_image: "ndetransition-cover-min.jpg"
+left_screenshot: "ndetransition-before-min.png"
+right_screenshot: "ndetransition-after-min.png"
 project_type: Website Redesign
-client:
+client: Rita Hammit
 brief_description: "This is a Drupal 7 website I architected and designed for a state department. The client
 requested that we assist them with overhauling their website. Their website was old while information was unorganized
  and repetitive."

@@ -2,8 +2,8 @@
 title: Resume Exercise
 date: 2018-08-26 09:10:44
 tags:
-cover_image: "resume-cover.jpg"
-left_screenshot: "resume.png"
+cover_image: "resume-cover-min.jpg"
+left_screenshot: "resume-min.png"
 left_alt_tag: "Screenshot of resume exercise website"
 project_type: Exercise to practice Javascript 
 client:

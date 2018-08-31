@@ -23,6 +23,7 @@
         <%- item.project_type %>
       </div>
     <% } %>
+    
   </header>
   <% if(item.brief_description) { %>
     <section class="dcf-measure nc-portfolio-desc">
@@ -56,6 +57,10 @@
       </div>
     </section>
     <section class="dcf-measure nc-portfolio-role-tech">
+      <% if(item.client) { %>
+        <h2 class="dcf-txt-md">Client</h2>
+        <%- item.client %>
+      <% } %>
       <% if(item.role) { %>
         <h2 class="dcf-txt-md">Role</h2>
         <%- item.role %>
@@ -117,7 +122,7 @@ L1.1-0.1z"/>
   <% } %>
   <div>
     <a href="<%- config.root %>" class="nc-btnlink nc-btnlink-back">
-      <div class="nc-btnlink-text">Portfolio List</div>
+      <div class="nc-btnlink-text">Project List</div>
       <svg class="icon icon-next"><use xlink:href="#arrow-right"></use></svg>
     </a>
   </div>
