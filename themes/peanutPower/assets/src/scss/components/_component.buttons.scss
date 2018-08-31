@@ -146,6 +146,10 @@
             box-shadow: 6px 6px 0 $black;
         }
 
+        .arrow-one, .arrow-two, .arrow-three {
+            fill: #fff; // provide default fill color
+        }
+
         &:focus {
             transform: skewX(-15deg) translateY(15%);
 

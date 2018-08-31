@@ -10,7 +10,7 @@
     }
     
     &:hover {
-        box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1px 35px 0 rgba(0, 0, 0, 0.3);
         border-image: linear-gradient(mix($white, $dark-teal, 25%), #4d9f0c) 30;
         
         img {

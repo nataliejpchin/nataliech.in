@@ -1062,6 +1062,9 @@ a.dcf-calendar-date-active:focus {
   color: #787979;
   font-size: 0.75em; }
 
+.dcf-label {
+  flex-shrink: 0; }
+
 .dcf-input-text {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1206,25 +1209,32 @@ button .dcf-icon {
     grid-template-columns: 1fr 1fr;
     grid-gap: 3.16049em 5vw; } }
 
+.dcf-input-group-form {
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap; }
+
 .dcf-input-group {
   display: -webkit-box;
   display: flex;
-  width: 100%; }
+  -webkit-box-flex: 1;
+          flex: 1 1 50%; }
 
 .dcf-input-group .dcf-input-text {
   -webkit-box-flex: 1;
-          flex-grow: 1;
-  margin-bottom: 0;
-  margin-top: 0;
-  width: 1%; }
+          flex: 1 1 auto; }
+
+.dcf-input-group,
+.dcf-input-group .dcf-input-text {
+  min-width: 0; }
 
 .dcf-input-group .dcf-btn {
   -webkit-box-align: center;
           align-items: center;
   display: -webkit-box;
-  display: flex;
-  margin-bottom: 0;
-  margin-top: 0; }
+  display: flex; }
 
 .dcf-input-group-addon {
   -webkit-box-align: center;
@@ -1514,6 +1524,9 @@ button .dcf-icon {
   transition: background-color 400ms ease-out, border-color 400ms ease-out, color 400ms ease-out;
   -webkit-box-shadow: 6px 6px 0 #3B3C3C;
           box-shadow: 6px 6px 0 #3B3C3C; }
+
+.nc-theme .dcf-btn-secondary .arrow-one, .nc-theme .dcf-btn-secondary .arrow-two, .nc-theme .dcf-btn-secondary .arrow-three {
+  fill: #fff; }
 
 .nc-theme .dcf-btn-secondary:focus {
   -webkit-transform: skewX(-15deg) translateY(15%);
