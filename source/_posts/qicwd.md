@@ -8,7 +8,7 @@ left_alt_tag: "Screenshot of simple static website"
 right_screenshot: "qicwd-drupal-min.png"
 right_alt_tag: "Screenshot of drupal website"
 project_type: Website Design and Development
-client:
+client: Michelle Graef
 brief_description: "This website was created for a newly awarded grant to be a collaboration platform for chosen public and tribal child welfare agencies. It also serves as an informational resource to state agencies and the public through blog posts, social media, and eventually a catalog of known-working evidence-based strategies to recruit, hire, and retain a competent workforce."  
 website_link: "http://www.qic-wd.org/"
 repo_link: "https://gitlab.com/nchin/qicwd-drupal"

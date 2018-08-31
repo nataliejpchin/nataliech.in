@@ -6,7 +6,7 @@ cover_image: "a4f-cover-min.jpg"
 left_screenshot: "a4f-before-min.png"
 right_screenshot: "a4f-after-min.png"
 project_type: Website Redesign
-client:
+client: Answers4Families
 brief_description: This project was a challenge due to its complexity and the client’s resistance to change. It was a great learning opportunity for me in terms of improving my client communication skills and also educating others on web best practices. There were many past attempts to redesign this website by previous developers but each attempt had not been successful. Aside from dated design and many other issues, the old website was was also built using Drupal 6 which exposes numerous security risks . With my expertise and determination, I was able to work closely with the client through open communication and was able complete the design and development of this website. This website is built in Drupal 7 and is still in the works in terms of content. However, development of theme, Drupal scaffolding and feature building has been completed.
 website_link: "http://www.answers4families.org:8080/"
 repo_link: "https://gitlab.com/nchin/answers4families-PUBLIC/tree/master/custom_qicwd"

@@ -1769,7 +1769,7 @@ Single-colored icons can be modified like so:
     @media only screen and (max-width: 55.925em) {
       .nc-portfolio > *:not(.nc-portfolio-screenshots-wrapper) {
         margin-left: 2.0rem; } }
-  .nc-portfolio-desc p::first-letter {
+  .nc-portfolio-desc p:first-child::first-letter {
     font-size: 4.74074em;
     line-height: 0.53;
     margin-top: 1.7rem;
