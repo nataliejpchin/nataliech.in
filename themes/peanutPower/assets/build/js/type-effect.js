@@ -1,83 +1,70 @@
-"use strict";
+'use strict';
 
-// function textSplit([...sets]) {
-// 	sets.forEach(set => {
-// 		const el = document.querySelector(set[0]);
-// 		el.setAttribute('aria-label', el.textContent);
-//
-// 		el.innerHTML = [...el.textContent]
-// 				.map((letter, i) => `<span class="child-${i}"aria-hidden="true">${letter}</span>`)
-// 				.join('');
-// 	})
-// };
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
-//credit: https://codepen.io/stevn/pen/jEZvXa
-function setupTypewriter(t) {
-	var HTML = t.innerHTML;
+function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
 
-	t.innerHTML = "";
+document.addEventListener('DOMContentLoaded', function () {
 
-	var cursorPosition = 0,
-	    tag = "",
-	    writingTag = false,
-	    tagOpen = false,
-	    typeSpeed = 50,
-	    tempTypeSpeed = 0;
+	var typeContent = document.getElementById('typewriter');
+	typeContent.classList.add('dcf-invisible'); // make the element invisible on pageload
+	var typeChildren = typeContent.children; // get all elements inside typewriter
 
-	var type = function type() {
+	var baseSpeed = 250;
+	var aggregateSpeed = 0;
 
-		if (writingTag === true) {
-			tag += HTML[cursorPosition];
-		}
+	function type(args) {
+		var _args = _slicedToArray(args, 2),
+		    letter = _args[0],
+		    el = _args[1]; // destructure args
 
-		if (HTML[cursorPosition] === "<") {
-			tempTypeSpeed = 0;
-			if (tagOpen) {
-				tagOpen = false;
-				writingTag = true;
-			} else {
-				tag = "";
-				tagOpen = true;
-				writingTag = true;
-				tag += HTML[cursorPosition];
+
+		el.textContent += letter;
+	}
+
+	function typewriter(typeChildren) {
+		var _loop = function _loop(child) {
+			var innerText = child.innerHTML; // copy text inside element
+			child.innerHTML = null; // clear existing text
+
+			var _innerText = _toArray(innerText),
+			    char = _innerText.slice(0); // make existing text into array
+
+			char.forEach(function (letter) {
+				var delay = Math.min(baseSpeed * Math.random() + 100, 300); // delay should not be longer than 300ms
+				aggregateSpeed += delay;
+				setTimeout(type.bind(null, [letter, child]), aggregateSpeed);
+			});
+		};
+
+		var _iteratorNormalCompletion = true;
+		var _didIteratorError = false;
+		var _iteratorError = undefined;
+
+		try {
+			for (var _iterator = typeChildren[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+				var child = _step.value;
+
+				_loop(child);
+			}
+		} catch (err) {
+			_didIteratorError = true;
+			_iteratorError = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion && _iterator.return) {
+					_iterator.return();
+				}
+			} finally {
+				if (_didIteratorError) {
+					throw _iteratorError;
+				}
 			}
 		}
-		if (!writingTag && tagOpen) {
-			tag.innerHTML += HTML[cursorPosition];
-		}
-		if (!writingTag && !tagOpen) {
-			if (HTML[cursorPosition] === " ") {
-				tempTypeSpeed = 0;
-			} else {
-				tempTypeSpeed = Math.random() * typeSpeed + 50;
-			}
-			t.innerHTML += HTML[cursorPosition];
-		}
-		if (writingTag === true && HTML[cursorPosition] === ">") {
-			tempTypeSpeed = Math.random() * typeSpeed + 50;
-			writingTag = false;
-			if (tagOpen) {
-				var newSpan = document.createElement("span");
-				t.appendChild(newSpan);
-				newSpan.innerHTML = tag;
-				tag = newSpan.firstChild;
-			}
-		}
+	}
 
-		cursorPosition += 1;
-		if (cursorPosition < HTML.length - 1) {
-			setTimeout(type, tempTypeSpeed);
-		}
-	};
-
-	return {
-		type: type
-	};
-}
-
-var typewriter = document.getElementById('typewriter');
-
-if (typewriter) {
-	typewriter = setupTypewriter(typewriter);
-	typewriter.type();
-}
+	setTimeout(function () {
+		typeContent.classList.remove('dcf-invisible');
+		typewriter(typeChildren);
+	}, 350); // kickoff typewriter after 350ms to account for fontloading and page drawing
+});

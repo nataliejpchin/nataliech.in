@@ -1673,8 +1673,8 @@ button .dcf-icon {
   .nc-card a {
     text-decoration: none; }
   .nc-card:hover {
-    -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
-            box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 35px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 35px 0 rgba(0, 0, 0, 0.3);
     -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#4f7888), to(#4d9f0c)) 30;
     -webkit-border-image: -webkit-linear-gradient(#4f7888, #4d9f0c) 30;
             border-image: -webkit-gradient(linear, left top, left bottom, from(#4f7888), to(#4d9f0c)) 30;
