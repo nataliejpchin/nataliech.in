@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function typewriter(typeChildren) {
 		for (const child of typeChildren) {
+			child.setAttribute('aria-live', 'polite');
 			const innerText = child.innerHTML;	// copy text inside element
 			child.innerHTML = null; // clear existing text
 			const [...char] = innerText; // make existing text into array
