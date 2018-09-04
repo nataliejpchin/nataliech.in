@@ -1,83 +1,37 @@
-// function textSplit([...sets]) {
-// 	sets.forEach(set => {
-// 		const el = document.querySelector(set[0]);
-// 		el.setAttribute('aria-label', el.textContent);
-//
-// 		el.innerHTML = [...el.textContent]
-// 				.map((letter, i) => `<span class="child-${i}"aria-hidden="true">${letter}</span>`)
-// 				.join('');
-// 	})
-// };
+document.addEventListener('DOMContentLoaded', () => {
 
-//credit: https://codepen.io/stevn/pen/jEZvXa
-function setupTypewriter(t) {
-	var HTML = t.innerHTML;
+	var typeContent = document.getElementById('typewriter');
+	typeContent.classList.add('dcf-invisible'); // make the element invisible on pageload
+	const typeChildren = typeContent.children; // get all elements inside typewriter
 
-	t.innerHTML = "";
+	const baseSpeed = 250;
+	let aggregateSpeed = 0;
 
-	var cursorPosition = 0,
-			tag = "",
-			writingTag = false,
-			tagOpen = false,
-			typeSpeed = 50,
-			tempTypeSpeed = 0;
+	function type(args) {
+		const [letter, el] = args; // destructure args
+		el.textContent += letter;
+	}
 
-	var type = function() {
+	function typewriter(typeChildren) {
+		for (const child of typeChildren) {
+			child.setAttribute('aria-live', 'polite');
+			const innerText = child.innerHTML;	// copy text inside element
+			child.innerHTML = null; // clear existing text
+			const [...char] = innerText; // make existing text into array
 
-		if (writingTag === true) {
-			tag += HTML[cursorPosition];
+			char.forEach(letter => {
+				const delay = Math.min(((baseSpeed * Math.random()) + 100), 300); // delay should not be longer than 300ms
+				aggregateSpeed += delay;
+				setTimeout(type.bind(null,[letter, child]), aggregateSpeed);
+			})
 		}
+	}
 
-		if (HTML[cursorPosition] === "<") {
-			tempTypeSpeed = 0;
-			if (tagOpen) {
-				tagOpen = false;
-				writingTag = true;
-			} else {
-				tag = "";
-				tagOpen = true;
-				writingTag = true;
-				tag += HTML[cursorPosition];
-			}
-		}
-		if (!writingTag && tagOpen) {
-			tag.innerHTML += HTML[cursorPosition];
-		}
-		if (!writingTag && !tagOpen) {
-			if (HTML[cursorPosition] === " ") {
-				tempTypeSpeed = 0;
-			}
-			else {
-				tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-			}
-			t.innerHTML += HTML[cursorPosition];
-		}
-		if (writingTag === true && HTML[cursorPosition] === ">") {
-			tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-			writingTag = false;
-			if (tagOpen) {
-				var newSpan = document.createElement("span");
-				t.appendChild(newSpan);
-				newSpan.innerHTML = tag;
-				tag = newSpan.firstChild;
-			}
-		}
+	setTimeout(() => {
+		typeContent.classList.remove('dcf-invisible');
+		typewriter(typeChildren);
+	}, 350); // kickoff typewriter after 350ms to account for fontloading and page drawing
 
-		cursorPosition += 1;
-		if (cursorPosition < HTML.length - 1) {
-			setTimeout(type, tempTypeSpeed);
-		}
+});
 
-	};
 
-	return {
-		type: type
-	};
-}
-
-var typewriter = document.getElementById('typewriter');
-
-if (typewriter) {
-	typewriter = setupTypewriter(typewriter);
-	typewriter.type();
-}
